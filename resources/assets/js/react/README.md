@@ -1,85 +1,109 @@
-# React Container Widget
+# React Container Module
 
-React компонент для відображення та управління контейнерами в Blade шаблонах.
+Повноцінна React реалізація модуля контейнерів для поступової міграції з jQuery на React.
+
+## Структура проекту
+
+```
+resources/assets/js/react/
+├── app.jsx                          # Головна точка входу
+├── containers/                      # Модуль контейнерів
+│   ├── ContainerList.jsx           # Головний компонент списку
+│   ├── ContainerTable.jsx          # Таблиця контейнерів
+│   ├── ContainerRow.jsx            # Рядок таблиці
+│   ├── ContainerFilters.jsx        # Фільтри та пошук
+│   ├── ContainerPagination.jsx     # Пагінація
+│   ├── localization.js             # Переклади
+│   └── api/
+│       └── containerApi.js         # API методи
+└── components/                      # Спільні компоненти
+    ├── LoadingSpinner.jsx          # Індикатор завантаження
+    └── ErrorAlert.jsx              # Повідомлення про помилки
+```
 
 ## Особливості
 
-- Таблиця контейнерів з пагінацією
-- Пошук по назві та коду
-- Фільтрація по типу контейнера
-- Фільтрація по реверсивності
-- Багатомовність (українська, англійська)
-- Responsive дизайн
-- Контекстне меню для кожного контейнера
+✅ **Модульна архітектура** - кожен компонент у окремому файлі
+✅ **Повторне використання** - спільні компоненти для всього додатку
+✅ **API Layer** - окремий шар для взаємодії з бекендом
+✅ **Локалізація** - підтримка української та англійської мов
+✅ **Поступова міграція** - React та jQuery працюють паралельно
+✅ **Webpack** - збірка через Laravel Mix
 
-## Використання
+## Встановлення
 
-### Варіант 1: Blade файл з вбудованим React (рекомендовано)
+### 1. Встановити залежності
 
-Використовуйте готовий Blade файл `resources/views/container/index-react.blade.php`:
-
-```php
-// У routes/web.php
-Route::get('/containers', function () {
-    return view('container.index-react');
-})->name('containers.index');
+```bash
+npm install react react-dom @babel/preset-react --save
 ```
 
-### Варіант 2: Інтеграція в існуючий Blade файл
+### 2. Зібрати React компоненти
 
-Додайте наступний код в ваш Blade файл:
+```bash
+npm run dev
+# або для production
+npm run production
+```
+
+### 3. Налаштування Laravel Mix
+
+Конфігурація вже додана в `webpack.mix.js`:
+
+```javascript
+mix.react('resources/assets/js/react/app.jsx', 'public/js/react/containers-bundle.js')
+```
+
+## Використання в Blade
+
+### Базове використання
 
 ```blade
-@section('before-style')
-    <style>
-        .gap-50 {
-            gap: 0.5rem;
-        }
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-        }
-    </style>
-@endsection
+@extends('layouts.admin')
 
 @section('content')
-    <div id="container-widget-root"></div>
+    <div id="container-app"></div>
 @endsection
 
 @section('page-script')
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <script type="text/babel">
-        // Скопіюйте код компонента з index-react.blade.php
-
-        const root = ReactDOM.createRoot(document.getElementById('container-widget-root'));
-        root.render(
-            <ContainerWidget
-                locale="{{ app()->getLocale() }}"
-                apiBaseUrl="{{ url('/') }}"
-            />
-        );
+    <script src="{{ asset('js/react/containers-bundle.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.ContainerApp.mount('container-app', {
+                locale: '{{ app()->getLocale() }}',
+                apiBaseUrl: '{{ url('/') }}'
+            });
+        });
     </script>
 @endsection
 ```
 
-## API Ендпоінт
+### Розмонтування компонента
 
-Компонент потребує API ендпоінт для отримання даних контейнерів:
+```javascript
+// Розмонтувати конкретний компонент
+window.ContainerApp.unmount('container-app');
 
+// Розмонтувати всі компоненти
+window.ContainerApp.unmountAll();
 ```
-GET /containers/api/list
-```
 
-Параметри запиту:
-- `page` - номер сторінки
-- `per_page` - кількість елементів на сторінці
-- `search` - пошуковий запит
-- `type` - фільтр по типу
-- `reversible` - фільтр по реверсивності (0 або 1)
+## API Endpoints
 
-Відповідь:
+Необхідно створити наступні ендпоінти в Laravel:
+
+### GET /containers/api/list
+
+Отримання списку контейнерів з фільтрацією та пагінацією
+
+**Параметри запиту:**
+- `page` (int) - номер сторінки
+- `per_page` (int) - кількість на сторінці
+- `search` (string) - пошуковий запит
+- `type` (string) - фільтр за типом
+- `reversible` (0|1) - фільтр за реверсивністю
+
+**Відповідь:**
 ```json
 {
     "data": [
@@ -96,48 +120,188 @@ GET /containers/api/list
 }
 ```
 
-## Приклад контролера Laravel
+### Приклад контролера
 
 ```php
-public function apiList(Request $request)
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use App\Models\Container;
+use Illuminate\Http\Request;
+
+class ContainerApiController extends Controller
 {
-    $query = Container::query();
+    public function list(Request $request)
+    {
+        $query = Container::query();
 
-    if ($request->search) {
-        $query->where(function($q) use ($request) {
-            $q->where('name', 'like', '%' . $request->search . '%')
-              ->orWhere('code_format', 'like', '%' . $request->search . '%');
-        });
+        // Пошук
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('name', 'like', "%{$search}%")
+                  ->orWhere('code_format', 'like', "%{$search}%");
+            });
+        }
+
+        // Фільтр за типом
+        if ($request->filled('type')) {
+            $query->where('type', $request->type);
+        }
+
+        // Фільтр за реверсивністю
+        if ($request->filled('reversible')) {
+            $query->where('reversible', $request->reversible);
+        }
+
+        $perPage = $request->input('per_page', 10);
+        $containers = $query->paginate($perPage);
+
+        return response()->json([
+            'data' => $containers->items(),
+            'total' => $containers->total()
+        ]);
     }
 
-    if ($request->type) {
-        $query->whereHas('type', function($q) use ($request) {
-            $q->where('name', $request->type);
-        });
+    public function show($id)
+    {
+        $container = Container::findOrFail($id);
+        return response()->json($container);
     }
 
-    if ($request->filled('reversible')) {
-        $query->where('reversible', $request->reversible);
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'code_format' => 'required|string|max:255',
+            'type' => 'required|string',
+            'reversible' => 'boolean',
+        ]);
+
+        $container = Container::create($validated);
+        return response()->json($container, 201);
     }
 
-    $perPage = $request->per_page ?? 10;
-    $containers = $query->paginate($perPage);
+    public function update(Request $request, $id)
+    {
+        $container = Container::findOrFail($id);
 
-    return response()->json([
-        'data' => $containers->items(),
-        'total' => $containers->total()
-    ]);
+        $validated = $request->validate([
+            'name' => 'string|max:255',
+            'code_format' => 'string|max:255',
+            'type' => 'string',
+            'reversible' => 'boolean',
+        ]);
+
+        $container->update($validated);
+        return response()->json($container);
+    }
+
+    public function destroy($id)
+    {
+        $container = Container::findOrFail($id);
+        $container->delete();
+        return response()->json(null, 204);
+    }
 }
 ```
 
-## Props компонента
+### Routes
 
-- `locale` - мова інтерфейсу ('uk' або 'en')
-- `apiBaseUrl` - базовий URL для API запитів
+```php
+Route::prefix('containers/api')->group(function () {
+    Route::get('/list', [ContainerApiController::class, 'list']);
+    Route::get('/{id}', [ContainerApiController::class, 'show']);
+    Route::post('/', [ContainerApiController::class, 'store']);
+    Route::put('/{id}', [ContainerApiController::class, 'update']);
+    Route::delete('/{id}', [ContainerApiController::class, 'destroy']);
+});
+```
 
-## Підтримувані мови
+## Додавання нових компонентів
 
-- Українська (uk)
-- Англійська (en)
+### 1. Створити компонент
 
-Додайте нові переклади в об'єкт `translations` всередині компонента.
+```jsx
+// resources/assets/js/react/containers/NewComponent.jsx
+import React from 'react';
+
+const NewComponent = ({ prop1, prop2 }) => {
+    return (
+        <div>
+            {/* JSX код */}
+        </div>
+    );
+};
+
+export default NewComponent;
+```
+
+### 2. Імпортувати в батьківський компонент
+
+```jsx
+import NewComponent from './NewComponent';
+```
+
+### 3. Перезібрати
+
+```bash
+npm run dev
+```
+
+## Поступова міграція
+
+Цей підхід дозволяє:
+
+1. **Залишити старий код** - jQuery компоненти продовжують працювати
+2. **Поступово мігрувати** - модуль за модулем
+3. **Використовувати React** - для нових фіч та рефакторингу старих
+4. **Спільні стилі** - Bootstrap CSS працює для обох
+
+### План міграції
+
+- [x] Контейнери - основний список
+- [ ] Контейнери - створення/редагування
+- [ ] SKU
+- [ ] Документи
+- [ ] Інвентаризація
+- [ ] Локації
+- [ ] Транспорт
+
+## Відладка
+
+### Development режим
+
+```bash
+npm run watch
+```
+
+Source maps включені в dev режимі для зручного дебагу.
+
+### Production режим
+
+```bash
+npm run production
+```
+
+Мінімізація та оптимізація для продакшну.
+
+## Переваги цього підходу
+
+1. **Модульність** - легко підтримувати та розширювати
+2. **Тестування** - кожен компонент можна тестувати окремо
+3. **Повторне використання** - компоненти можна використовувати в різних місцях
+4. **TypeScript ready** - легко додати типізацію в майбутньому
+5. **Сучасний стек** - React 18 з хуками
+6. **Поступова міграція** - не потрібно переписувати все відразу
+
+## Наступні кроки
+
+1. Додати TypeScript для типобезпеки
+2. Додати React Router для SPA навігації
+3. Додати State Management (Redux/Zustand)
+4. Додати Unit тести (Jest + React Testing Library)
+5. Додати E2E тести (Cypress/Playwright)
+6. Мігрувати інші модулі на React

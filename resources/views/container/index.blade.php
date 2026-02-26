@@ -2,53 +2,51 @@
 @section('title', __('localization.container_index_title'))
 
 @section('before-style')
-    <link
-        rel="stylesheet"
-        href="{{ asset('assets/libs/jqwidget/jqwidgets/styles/jqx.base.css') }}"
-        type="text/css"
-    />
-    <link
-        rel="stylesheet"
-        href="{{ asset('assets/libs/jqwidget/jqwidgets/styles/jqx.light-wms.css') }}"
-        type="text/css"
-    />
-@endsection
-
-@section('table-js')
-    @include('layouts.table-scripts')
-    <script
-        type="module"
-        src="{{ asset('assets/js/grid/container/container-table.js') }}"
-    ></script>
+    <style>
+        .gap-50 {
+            gap: 0.5rem;
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        .container-list-widget {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+    </style>
 @endsection
 
 @section('content')
-    @if (count($container))
-        <x-layout.index-table-card
-            :title="__('localization.container_index_container')"
-            :buttonText="__('localization.container_index_add_container')"
-            :buttonRoute="route('containers.create')"
-            tableId="container-table"
-        />
-    @else
-        <x-layout.index-empty-message
-            :title="__('localization.container_index_no_container')"
-            :message="__('localization.container_index_create_soon')"
-            :buttonText="__('localization.container_index_create_container')"
-            :buttonRoute="route('containers.create')"
-        />
-    @endif
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="card-title mb-0">{{ __('localization.container_index_container') }}</h4>
+            <a href="{{ route('containers.create') }}" class="btn btn-primary">
+                <i data-feather="plus" class="me-50"></i>
+                {{ __('localization.container_index_add_container') }}
+            </a>
+        </div>
+        <div class="card-body">
+            <div id="container-app"></div>
+        </div>
+    </div>
 @endsection
 
 @section('page-script')
-    <script type="module">
-        import { tableSetting } from '{{ asset('assets/js/grid/components/table-setting.js') }}';
+    <script src="{{ asset('js/react/containers-bundle.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.ContainerApp) {
+                window.ContainerApp.mount('container-app', {
+                    locale: '{{ app()->getLocale() }}',
+                    apiBaseUrl: '{{ url('/') }}'
+                });
+            }
 
-        tableSetting($('#container-table'), '', 45, 65);
-    </script>
-    <script type="module">
-        import { offCanvasByBorder } from '{{ asset('assets/js/utils/offCanvasByBorder.js') }}';
-
-        offCanvasByBorder($('#container-table'));
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+        });
     </script>
 @endsection
