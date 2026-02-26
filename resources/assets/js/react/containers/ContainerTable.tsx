@@ -9,6 +9,7 @@ import {
   SortingState,
 } from '@tanstack/react-table';
 import { Menu, Transition } from '@headlessui/react';
+import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
 import type { Container } from '../types/container';
 import type { Translations } from './localization';
 
@@ -112,16 +113,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
             <div className="flex justify-center">
               <Menu as="div" className="relative inline-block text-left">
                 <Menu.Button className="inline-flex justify-center items-center w-8 h-8 rounded-full hover:bg-gray-100 transition-colors">
-                  <svg
-                    className="w-5 h-5 text-gray-600"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
-                  </svg>
+                  <EllipsisVerticalIcon className="w-5 h-5 text-gray-600" />
                 </Menu.Button>
 
                 <Transition
