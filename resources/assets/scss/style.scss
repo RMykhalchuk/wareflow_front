@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+// 1. Vendors and Vendors Extensions
+@use 'vendors/normalize';
+
+@use 'vendors/jqxgrid';
+@use 'vendors/ext-component-toastr';
+@use 'vendors/tabs';
+
+@use 'vendors-extensions/core';
+@use 'vendors-extensions/form-flat-pickr';
+@use 'vendors-extensions/offcanvas-table';
+//@use 'vendors-extensions/pace';
+@use 'vendors-extensions/select2';
+@use 'vendors-extensions/waves';
+
+// 2. Base stuff
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/helpers';
+@use 'base/reset';
+@use 'base/typography';
+
+// 3. Layout-related sections
+@use 'layout/header';
+@use 'layout/navigation';
+
+// 4. Components
+@use 'components/bookmarks';
+@use 'components/offcanvas';
+@use 'components/tag-input';
+@use 'components/priority-btn';
+
+// 5. Pages
+@use 'pages/additional-equipment';
+@use 'pages/all';
+@use 'pages/auth';
+@use 'pages/company';
+@use 'pages/_unused/contract';
+@use 'pages/document-type';
+@use 'pages/goods';
+@use 'pages/_unused/invoice';
+@use 'pages/leftovers';
+@use 'pages/onboarding';
+@use 'pages/warehouse-map';
+
+//@use 'pages/registers';
+@use 'pages/_unused/regulation';
+@use 'pages/_unused/residue-control';
+@use 'pages/transport';
+//@use 'pages/transport-planning';
+@use 'pages/type-goods';
+@use 'pages/user';
+@use 'pages/warehouse';
+@use 'pages/workspace';
+
+// 6. Themes
+@use 'themes/default';
+@use 'themes/dark';
+
+// 7. Variables
+@use 'variables/variables';

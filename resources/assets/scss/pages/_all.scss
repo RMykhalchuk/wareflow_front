@@ -1,0 +1,200 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.card-data-reverse {
+    & > div:nth-child(even) {
+        background-color: #4b465c05;
+    }
+}
+
+.card-data-darker {
+    & > div:nth-child(odd) {
+        background-color: #f8f8f9;
+    }
+}
+
+.card-data-reverse-darker {
+    & > div:nth-child(even) {
+        background-color: #f8f8f9;
+    }
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    padding: 0.75rem 1.25rem;
+    color: inherit;
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+}
+
+.close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    margin-bottom: 0px;
+}
+
+.admin-body {
+    padding-top: 150px;
+}
+
+.plus-icon {
+    width: 18px;
+    margin-right: 0.5rem;
+}
+
+//step calendar
+.record {
+    margin-right: -27px;
+}
+
+.spec-condition {
+    height: 603px;
+    width: 580px;
+}
+
+// warehouse and user
+
+.radio-card {
+    border: 1px solid #dbdade;
+    border-radius: 6px;
+    width: 21%;
+}
+
+.form-check-warning .form-check-input:checked {
+    border-color: #d9b414;
+    background-color: #d9b414 !important;
+}
+
+.modal-header {
+    background-color: var(--bs-modal-bg) !important;
+}
+
+.popup-header {
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+}
+
+.popup-card {
+    margin-bottom: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.form-check-input:checked[type='radio'] {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='%23fff'/></svg>");
+}
+
+.custom-color-input:checked[type='radio'] {
+    background-image: none;
+}
+
+.cancel-btn {
+    color: #a8aaae;
+}
+
+#block_1,
+#block_2,
+#block_3 {
+    padding: 20px;
+}
+
+.realization {
+    width: 52px;
+}
+
+.justify-content-normal {
+    justify-content: normal !important;
+    column-gap: 5px;
+}
+
+.form-check:not(.form-switch) .form-check-input[type='checkbox']:checked {
+    background-size: 65%;
+}
+
+.border-top-secondary-500 {
+    border-top: 1px solid rgba(219, 218, 222, 1);
+}
+
+.border-start-secondary-500 {
+    border-left: 1px solid rgba(219, 218, 222, 1);
+}
+
+.border-end-secondary-500 {
+    border-right: 1px solid rgba(219, 218, 222, 1);
+}
+
+@media screen and (min-width: 1200px) {
+    .nav-width-100 {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 1316px) and (max-width: 1436px) {
+    .nav-title {
+        font-size: 14px !important;
+    }
+    .custom-padding {
+        padding: 0.715rem 1.1rem !important;
+    }
+    .type-svg {
+        width: 19px !important;
+        height: 19px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1436px) {
+    .nav-title {
+        font-size: 13px !important;
+    }
+    .custom-padding {
+        padding: 0.715rem 1rem !important;
+    }
+    .type-svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1240px) {
+    .custom-padding {
+        padding: 0.715rem 0.8rem !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .admin-body {
+        padding-top: 85px;
+    }
+}

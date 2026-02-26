@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.list-document-effect {
+    &:hover {
+        background-color: #a8aaae14;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: #a8aaae29;
+    }
+}

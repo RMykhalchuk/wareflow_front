@@ -1,0 +1,69 @@
+image: php:8.1
+
+pipelines:
+ branches:
+  dev:
+    - step:
+        name: Build and Test
+        caches:
+          - composer
+        artifacts:
+          - vendor/**/*
+          - bootstrap/cache/*
+        script:
+          # Install system dependencies
+          - apt-get update
+          - apt-get install -qy unzip libzip-dev curl npm
+
+          # Install AWS CLI
+          - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          - unzip awscliv2.zip
+          - ./aws/install
+          - rm -R ./aws
+          - rm -f awscliv2.zip
+
+          # Install Composer
+          - export COMPOSER_ALLOW_SUPERUSER=1
+          - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+          - cp .env.example .env
+
+          # Install PHP dependencies
+          - composer install --optimize-autoloader --no-dev
+
+          # Cache Laravel configurations
+          - php artisan config:cache
+          - php artisan route:cache
+          - php artisan view:cache
+
+          # Run database migrations (adjust as needed)
+          - php artisan migrate --force
+
+          # Build assets (adjust as needed, e.g., npm, yarn, or mix)
+          - npm run dev
+
+          # Debugging: Print a message to indicate the completion of this step
+          - echo "Build and Test step completed successfully"
+
+          - apt-get update && apt-get install -y python3-pip
+          - pip3 install awscli
+
+          - export AWS_ACCESS_KEY_ID=AKIA4MTFN52DFVC2AHEE
+          - export AWS_SECRET_ACCESS_KEY=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
+          - export AWS_DEFAULT_REGION=eu-north-1
+          - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          - aws configure set default.region $AWS_DEFAULT_REGION
+          # Zip application files
+          - zip -r wmspro.zip .
+
+          # Deploy to AWS Elastic Beanstalk
+          - aws deploy create-deployment --application-name wmspro --deployment-group-name wmsproTest --s3-location bucket=wmspro,bundleType=zip,key=wmspro.zip
+
+
+definitions:
+  caches:
+    composer: vendor
+
+
+

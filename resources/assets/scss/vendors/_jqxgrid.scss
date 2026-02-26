@@ -1,0 +1,374 @@
+// --------------- JqxGrid rewrite style start
+
+.jqx-grid-row-hover {
+    background: #f8f9f9 !important;
+    color: inherit !important;
+}
+
+.active-row-table svg path {
+    stroke: #d9b414;
+}
+
+.custom-pager-page-numbers .custom-pager-page-btn:hover {
+    background-color: #4b465c29 !important;
+}
+
+.custom-pager-page-numbers .custom-pager-page-btn:active {
+    background-color: rgba(27, 27, 28, 0.16) !important;
+}
+
+.custom-pager-page-numbers .custom-pager-page-btn-active:hover {
+    background-color: #cfaa0b !important;
+    color: white;
+}
+
+.custom-pager-page-numbers .custom-pager-page-btn-active:active {
+    background-color: #d5b71a !important;
+    color: white;
+}
+
+.custom-pager-page-btn-active {
+    background-color: #d9b414 !important;
+    color: white;
+}
+
+.custom-pager-prev-btn,
+.custom-pager-next-btn {
+    background: rgba(75, 70, 92, 0.08);
+}
+
+.custom-pager-prev-btn:hover,
+.custom-pager-next-btn:hover {
+    background-color: #4b465c29 !important;
+}
+
+.custom-pager-prev-btn:active,
+.custom-pager-next-btn:active {
+    background-color: rgba(27, 27, 28, 0.16) !important;
+}
+
+.custom-pager-center > .btn:active {
+    color: inherit;
+    background-color: inherit;
+    border-color: unset;
+}
+
+.custom-pager-page-btn:active {
+    border: unset;
+}
+
+.custom-pager-center .btn:active {
+    border: unset;
+}
+
+.jqx-listbox {
+    border: unset;
+}
+
+.changeMenu-2 {
+    background-color: unset;
+    border: unset;
+    display: flex;
+}
+
+.changeMenu-3 {
+    background-color: unset;
+    border: unset;
+}
+
+#listBoxContentjqxlistbox .jqx-fill-state-pressed {
+    border-color: white !important;
+    background: #d9b41414 !important;
+}
+
+#listBoxContentjqxlistbox .jqx-fill-state-hover {
+    border-color: white !important;
+    background: #a8aaae14 !important;
+}
+
+.custom-pager-page-size:focus-visible {
+    outline: unset;
+}
+
+.checkbox-castom-listbox {
+}
+
+.action-table .jqx-widget-header {
+    display: none !important;
+}
+
+.btn-table-cell:focus-visible {
+    outline: unset;
+    background-color: #4b465c29 !important;
+}
+
+.btn-table-cell {
+    border: unset;
+}
+
+.btn-table-cell:active {
+    background-color: #4b465c29 !important;
+    padding: 3px !important;
+}
+
+.btn-table-cell.show {
+    background-color: #4b465c29 !important;
+    padding: 3px !important;
+}
+
+.pinButton {
+    background-color: unset !important;
+}
+
+.pinButton:active {
+    border-color: white !important;
+    background-color: transparent !important;
+}
+
+.pinned {
+    background-color: #d9b41414;
+}
+
+// Виправлення багу із показом налаштувань таблиці
+#tabs {
+    &.tabs-transport-planning-сss,
+    &.tabs-document-create-сss {
+        overflow: visible;
+
+        & .jqx-tabs-content {
+            visibility: visible;
+        }
+    }
+}
+
+.jqx-popover-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popover-castom {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    li {
+        height: 40px;
+        display: flex;
+        align-items: center;
+
+        a:active {
+            background-color: transparent;
+        }
+    }
+}
+
+.popover-castom {
+    li {
+        a {
+            border-radius: 3px;
+            padding: 3px 16px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        &:hover {
+            border-radius: 3px;
+            color: #d9b414 !important;
+            background-color: #d9b41414;
+        }
+    }
+}
+
+.action-table-drop {
+    justify-content: center;
+}
+
+.btn-tabs-watch-all {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.tabs-external-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: var(--bs-dropdown-link-active-color);
+    text-decoration: none;
+    background-color: #d9b414 !important;
+
+    &:hover {
+        color: white !important;
+    }
+}
+
+// --------------- JqxGrid rewrite style end
+
+//Pager for table
+.custom-pager {
+    font-size: 14px;
+    font-weight: normal;
+    background-color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+}
+
+.custom-pager-select-size {
+    margin-right: 24px;
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+    // `lg` applies to medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) {
+        margin-right: 20px;
+    }
+    // `md` applies to small devices (landscape phones, less than 768px)
+    @media (max-width: 767.98px) {
+        margin-right: 5px;
+        column-gap: 3px;
+    }
+}
+
+.custom-pager-select-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-pager-page-size {
+    border: unset;
+    background-color: unset;
+    color: #000000;
+}
+
+.custom-pager-page-info {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @media (max-width: 991.98px) {
+        margin-right: 14px;
+    }
+    @media (max-width: 767.98px) {
+        margin-right: 5px;
+    }
+}
+
+// custom listbox
+.custom-list-item:hover {
+    background-color: #a8aaae14;
+    cursor: pointer;
+}
+
+.custom-list-item:active {
+    background-color: rgba(168, 170, 174, 0.28);
+    cursor: pointer;
+}
+
+.custom-pager-select-size {
+    .select2-container--classic .select2-selection--single,
+    .select2-container--default .select2-selection--single {
+        min-height: unset !important;
+        padding: 0 !important;
+        border-color: #ffffff;
+    }
+
+    .select2-container .select2-selection--single {
+        //height: 20px !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 12px !important;
+        top: 2px !important;
+    }
+
+    .select2-container--classic .select2-results__option,
+    .select2-container--default .select2-results__option {
+        padding: 0.3rem 1rem !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        font-weight: 500;
+    }
+
+    .select2-container--classic .select2-selection--single .select2-selection__arrow b,
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        //golden color
+        background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M4%206L8%2010L12%206%22%20stroke%3D%22%23000000%22%20stroke-width%3D%221.75%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E');
+    }
+}
+
+// filder old
+li.filter > div.filter > div.filter > .filter:nth-child(7) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    width: 95% !important;
+}
+
+li.filter > div.filter > div.filter {
+    margin-left: 25px !important;
+}
+
+//лоадер кастомні
+
+.loader-spinner {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ddd;
+    border-top: 4px solid #ebca1a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//фільтри кастомні
+#filters-scroll-wrapper {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+#filters-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+#filterCustomPopoverContent .jqx-popover-arrow {
+    display: none !important;
+}
+
+.row-selected {
+    background-color: #d4edda !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+// pinned column transporent bc
+.jqx-grid-cell-pinned-light-wms {
+    background-color: transparent !important;
+}

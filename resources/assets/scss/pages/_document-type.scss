@@ -1,0 +1,243 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the doc type of the site/application.
+// -----------------------------------------------------------------------------
+
+// --------------- Document-type configurator start
+
+.trash {
+    background-color: #a8aaae14;
+    display: flex;
+    height: 100%;
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+}
+
+//.sortable-placeholder {
+//    display: none;
+//}
+
+.sortableList-over {
+    border: 2px dashed #ccc;
+    background-color: #a8aaae14;
+    border-radius: 5px;
+}
+
+.sortableListStyle {
+    padding: 5px 10px 20px 10px !important;
+    min-height: 70px;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.accordion-chevron-active {
+    rotate: 90deg;
+    transition: all 0.1s linear;
+}
+
+.sortable-item,
+.group {
+    width: auto !important;
+    height: auto !important;
+    z-index: 1000 !important;
+}
+
+.group-create {
+    width: 33% !important;
+
+    &-padding {
+        padding: 12px !important;
+    }
+
+    &-flex {
+        display: flex;
+        flex-direction: column !important;
+        gap: 1rem !important;
+
+        &-center {
+            justify-content: center !important;
+        }
+    }
+
+    &-padding-end {
+        padding-right: 0 !important;
+    }
+}
+
+.removeButtonBaseField,
+.removeButtonBaseFieldParam {
+    display: none;
+
+    .parameter-list &,
+    [id^='parameter-list'] & {
+        display: flex;
+
+        .js-input-parameter {
+            display: none;
+        }
+    }
+}
+
+.parameter-item {
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid rgba(168, 170, 174, 0.08);
+    box-shadow: 0 2px 4px rgba(165, 163, 174, 0.3);
+    border-radius: 6px;
+    list-style-type: none;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+
+    &-title {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        color: #4b465c;
+    }
+
+    img {
+        margin-right: 16px;
+    }
+
+    &:hover {
+        background-color: #a8aaae14 !important;
+        cursor: pointer;
+
+        .removeButtonBaseField {
+            display: flex;
+        }
+
+        .js-input-parameter {
+            display: block;
+        }
+    }
+}
+
+.checked-js-input-parameter {
+    display: block !important;
+}
+
+.accordion-header {
+    &:hover {
+        background-color: #f7f7f7 !important;
+        cursor: pointer;
+    }
+}
+
+.accordion-header-castom {
+    border: 1px solid rgba(168, 170, 174, 0.08);
+    box-shadow: 0 2px 4px rgba(165, 163, 174, 0.3);
+    border-radius: 6px;
+}
+
+.document-new-fields {
+    list-style: none;
+    padding-left: 0;
+
+    .accordion-header:hover {
+        background-color: #f7f7f7 !important;
+
+        .removeButtonBaseField {
+            display: block;
+        }
+    }
+}
+
+.groupPlaceholder {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+// document type buttons and inputs
+
+.header-block-title-input {
+    color: #5e5873;
+    width: 200px;
+    font-size: 1.286rem;
+
+    &:focus {
+        border-color: unset !important;
+        box-shadow: inherit !important;
+        outline: none;
+    }
+}
+
+.header-hover {
+    background-color: #a8aaae29;
+    border-radius: 5px;
+}
+
+.link-hover-underline:hover {
+    text-decoration: underline;
+}
+
+// --------------- Document-type configurator end
+
+// --------------- Document fields start
+
+.ui-accordion-header {
+    border: 1px solid rgba(168, 170, 174, 0.08);
+    box-shadow: 0 2px 4px rgba(165, 163, 174, 0.3);
+    border-radius: 6px;
+    padding: 12px 24px;
+    margin: 12px 0;
+}
+
+.accordion-field-header {
+    padding: 10px 15px 8px 15px;
+    height: 50px;
+}
+
+.accordion-body-header-icon {
+    padding: 0;
+}
+
+.document-field-accordion-body,
+.draggable {
+    border: 1px solid rgba(168, 170, 174, 0.08);
+    box-shadow: 0 2px 4px rgba(165, 163, 174, 0.3);
+    border-radius: 6px;
+    padding: 12px 24px;
+    background: #ffffff;
+    margin: 4px 0;
+}
+
+.document-field-accordion-body {
+    border-radius: 0 0 6px 6px;
+    margin-top: -3px;
+    height: auto !important;
+}
+
+.trash-red {
+    padding-right: 5px;
+}
+
+// --------------- Document fields end
+
+.field-type {
+    padding: 5px 0;
+
+    &:hover {
+        background: rgba(217, 180, 20, 0.06);
+    }
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.accordion-list-item-title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.accordion-list-item-text {
+    font-size: 15px;
+    font-weight: 400;
+}

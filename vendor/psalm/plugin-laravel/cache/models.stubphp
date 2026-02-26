@@ -1,0 +1,1772 @@
+<?php
+
+// @formatter:off
+// phpcs:ignoreFile
+/**
+ * A helper file for your Eloquent Models
+ * Copy the phpDocs from this file to the correct Model,
+ * And remove them from this file, to prevent double declarations.
+ *
+ * @author Barry vd. Heuvel <barryvdh@gmail.com>
+ */
+
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Dictionaries\AdditionalEquipmentModel> $models
+ * @property-read int|null $models_count
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentBrand newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentBrand newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentBrand query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentBrand whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentBrand whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentBrand whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentBrand whereLocales(string $column, array $locales)
+ */
+	final class AdditionalEquipmentBrand extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read \App\Models\Dictionaries\AdditionalEquipmentBrand|null $brand
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentModel newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentModel newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentModel query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentModel whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentModel whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentModel whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentModel whereLocales(string $column, array $locales)
+ */
+	final class AdditionalEquipmentModel extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipmentType whereLocales(string $column, array $locales)
+ */
+	final class AdditionalEquipmentType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adr newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adr newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adr query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adr whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adr whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adr whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adr whereLocales(string $column, array $locales)
+ */
+	final class Adr extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CargoType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CargoType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CargoType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CargoType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CargoType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CargoType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CargoType whereLocales(string $column, array $locales)
+ */
+	final class CargoType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CellStatus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CellStatus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CellStatus query()
+ */
+	final class CellStatus extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyCategory newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyCategory newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyCategory query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyCategory whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyCategory whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyCategory whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyCategory whereLocales(string $column, array $locales)
+ */
+	final class CompanyCategory extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyStatus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyStatus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyStatus query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyStatus whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyStatus whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyStatus whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyStatus whereLocales(string $column, array $locales)
+ */
+	final class CompanyStatus extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyType whereLocales(string $column, array $locales)
+ */
+	final class CompanyType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DeliveryType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DeliveryType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DeliveryType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DeliveryType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DeliveryType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DeliveryType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DeliveryType whereLocales(string $column, array $locales)
+ */
+	final class DeliveryType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStatus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStatus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStatus query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStatus whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStatus whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStatus whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStatus whereLocales(string $column, array $locales)
+ */
+	final class DoctypeStatus extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentStatus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentStatus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentStatus query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentStatus whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentStatus whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentStatus whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentStatus whereLocales(string $column, array $locales)
+ */
+	final class DocumentStatus extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DownloadZone newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DownloadZone newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DownloadZone query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DownloadZone whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DownloadZone whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DownloadZone whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DownloadZone whereLocales(string $column, array $locales)
+ */
+	final class DownloadZone extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ExceptionType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ExceptionType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ExceptionType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ExceptionType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ExceptionType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ExceptionType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ExceptionType whereLocales(string $column, array $locales)
+ */
+	final class ExceptionType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Categories> $categories
+ * @property-read int|null $categories_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, GoodsCategory> $children
+ * @property-read int|null $children_count
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsCategory newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsCategory newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsCategory query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsCategory whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsCategory whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsCategory whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsCategory whereLocales(string $column, array $locales)
+ */
+	final class GoodsCategory extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read string $label
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalType whereLocales(string $column, array $locales)
+ */
+	final class LegalType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MeasurementUnit newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MeasurementUnit newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MeasurementUnit query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MeasurementUnit whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MeasurementUnit whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MeasurementUnit whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MeasurementUnit whereLocales(string $column, array $locales)
+ */
+	final class MeasurementUnit extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * PackageType.
+ *
+ * @property-read string $label
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PackageType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PackageType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PackageType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PackageType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PackageType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PackageType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PackageType whereLocales(string $column, array $locales)
+ */
+	final class PackageType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Position newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Position newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Position query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Position whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Position whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Position whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Position whereLocales(string $column, array $locales)
+ */
+	final class Position extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read \App\Models\Dictionaries\TransportDownload|null $download_method
+ * @property-read \App\Models\Dictionaries\DownloadZone|null $download_zone
+ * @property-read \App\Models\User|null $manager
+ * @property-read \App\Models\Dictionaries\RegisterStatus|null $status
+ * @property-read \App\Models\User|null $storekeeper
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Register newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Register newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Register onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Register query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Register withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Register withoutTrashed()
+ */
+	final class Register extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RegisterStatus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RegisterStatus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RegisterStatus query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RegisterStatus whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RegisterStatus whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RegisterStatus whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RegisterStatus whereLocales(string $column, array $locales)
+ */
+	final class RegisterStatus extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ServiceCategories newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ServiceCategories newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ServiceCategories query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ServiceCategories whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ServiceCategories whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ServiceCategories whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ServiceCategories whereLocales(string $column, array $locales)
+ */
+	final class ServiceCategories extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StorageType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StorageType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StorageType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StorageType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StorageType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StorageType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StorageType whereLocales(string $column, array $locales)
+ */
+	final class StorageType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Dictionaries\TransportModel> $models
+ * @property-read int|null $models_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportBrand newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportBrand newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportBrand query()
+ */
+	final class TransportBrand extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportCategory newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportCategory newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportCategory query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportCategory whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportCategory whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportCategory whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportCategory whereLocales(string $column, array $locales)
+ */
+	final class TransportCategory extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportDownload newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportDownload newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportDownload query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportDownload whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportDownload whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportDownload whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportDownload whereLocales(string $column, array $locales)
+ */
+	final class TransportDownload extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read \App\Models\Dictionaries\TransportBrand|null $brand
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportModel newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportModel newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportModel query()
+ */
+	final class TransportModel extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailureType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailureType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailureType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailureType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailureType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailureType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailureType whereLocales(string $column, array $locales)
+ */
+	final class TransportPlanningFailureType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningStatus joinAddress($columnForJoin = 'address_id', $withCountry = true)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningStatus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningStatus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningStatus query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningStatus whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningStatus whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningStatus whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningStatus whereLocales(string $column, array $locales)
+ */
+	final class TransportPlanningStatus extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read \App\Models\Entities\Address\AddressDetails|null $address
+ * @property-read \App\Models\Entities\TransportPlanning\TransportPlanningFailure|null $failure
+ * @property-read \App\Models\Dictionaries\TransportPlanningStatus|null $status
+ * @property-read \App\Models\Entities\TransportPlanning\TransportPlanning|null $transport_planning
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningToStatus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningToStatus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningToStatus query()
+ */
+	final class TransportPlanningToStatus extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportType whereLocales(string $column, array $locales)
+ */
+	final class TransportType extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserStatus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserStatus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserStatus query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserStatus whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserStatus whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserStatus whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserStatus whereLocales(string $column, array $locales)
+ */
+	final class UserStatus extends \Eloquent {}
+}
+
+namespace App\Models\Dictionaries{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseType whereLocales(string $column, array $locales)
+ */
+	final class WarehouseType extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Address{
+/**
+ * @property-read \App\Models\Entities\Address\Country|null $country
+ * @property-read \App\Models\Entities\Address\Settlement|null $settlement
+ * @property-read \App\Models\Entities\Address\Street|null $street
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AddressDetails addFullAddress($alias = 'full_address', $useDefaultSelect = true, $withCountry = true)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AddressDetails newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AddressDetails newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AddressDetails query()
+ */
+	final class AddressDetails extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Address{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Country newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Country newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Country query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Country whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Country whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Country whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Country whereLocales(string $column, array $locales)
+ */
+	final class Country extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Address{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Region newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Region newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Region query()
+ */
+	final class Region extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Address{
+/**
+ * @property-read \App\Models\Entities\Address\Region|null $region
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Settlement newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Settlement newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Settlement query()
+ */
+	final class Settlement extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Address{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Street newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Street newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Street query()
+ */
+	final class Street extends \Eloquent {}
+}
+
+namespace App\Models\Entities{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $entity
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Barcode newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Barcode newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Barcode query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Barcode withoutCreatorCompany()
+ */
+	final class Barcode extends \Eloquent {}
+}
+
+namespace App\Models\Entities{
+/**
+ * Categories.
+ *
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Categories> $children
+ * @property-read int|null $children_count
+ * @property-read string|null $goods_category_name
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Goods\Goods> $goods
+ * @property-read int|null $goods_count
+ * @property-read \App\Models\Dictionaries\GoodsCategory|null $goodsCategory
+ * @property-read Categories|null $parent
+ * @property-read \App\Models\Entities\System\Workspace|null $workspace
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Categories active()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Categories forWorkspace(string|int $workspaceId)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Categories newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Categories newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Categories ordered()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Categories query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Categories root()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Categories withoutWorkspace()
+ */
+	class Categories extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Company{
+/**
+ * Company.
+ *
+ * @property \App\Enums\Currency $currency
+ * @property-read \App\Models\Entities\Address\AddressDetails|null $address
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\System\Workspace> $companiesInWorkspace
+ * @property-read int|null $companies_in_workspace_count
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $company
+ * @property-read string $full_name
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Company\CompanyRequest> $requests
+ * @property-read int|null $requests_count
+ * @property-read \App\Models\Dictionaries\CompanyType|null $type
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $users
+ * @property-read int|null $users_count
+ * @property-read \App\Models\Entities\System\Workspace|null $workspace
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company addName()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company filterByCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company filterByWorkspace()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Company withoutTrashed()
+ */
+	final class Company extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Company{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @property-read \App\Models\User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyRequest newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyRequest newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyRequest query()
+ */
+	final class CompanyRequest extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Company{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyToWorkspace newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyToWorkspace newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyToWorkspace query()
+ */
+	final class CompanyToWorkspace extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Company{
+/**
+ * LegalCompany.
+ *
+ * @property-read \App\Models\Entities\Address\AddressDetails|null $address
+ * @property-read string|null $reg_doc_url
+ * @property-read string|null $ust_doc_url
+ * @property-read \App\Models\Dictionaries\LegalType|null $legal_type
+ * @property-read \App\Models\Entities\Company\Company|null $related
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalCompany newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalCompany newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalCompany onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalCompany query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalCompany withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LegalCompany withoutTrashed()
+ */
+	final class LegalCompany extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Company{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $related
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PhysicalCompany newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PhysicalCompany newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PhysicalCompany onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PhysicalCompany query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PhysicalCompany withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PhysicalCompany withoutTrashed()
+ */
+	final class PhysicalCompany extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Container{
+/**
+ * @property-read \App\Models\Entities\WarehouseComponents\Cell|null $cell
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Container\ContainerRegister> $registers
+ * @property-read int|null $registers_count
+ * @property-read \App\Models\Entities\Container\ContainerType|null $type
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Container newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Container newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Container onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Container query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Container withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Container withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Container withoutTrashed()
+ */
+	final class Container extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Container{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerByDocument newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerByDocument newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerByDocument query()
+ */
+	final class ContainerByDocument extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Container{
+/**
+ * @property \App\Enums\ContainerRegister\ContainerRegisterStatus $status_id
+ * @property-read \App\Models\Entities\WarehouseComponents\Cell|null $cell
+ * @property-read \App\Models\Entities\Container\Container|null $container
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read string $load_weight
+ * @property-read mixed $status
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Leftover\Leftover> $leftovers
+ * @property-read int|null $leftovers_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerRegister inCurrentWarehouse()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerRegister newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerRegister newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerRegister onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerRegister query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerRegister withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerRegister withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerRegister withoutTrashed()
+ */
+	class ContainerRegister extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Container{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContainerType whereLocales(string $column, array $locales)
+ */
+	final class ContainerType extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Contract{
+/**
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Contract\ContractComment> $comments
+ * @property-read int|null $comments_count
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @property-read \App\Models\Entities\Contract\Regulation|null $company_regulation
+ * @property-read \App\Models\Entities\Company\Company|null $counterparty
+ * @property-read \App\Models\Entities\Contract\Regulation|null $counterparty_regulation
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Contract newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Contract newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Contract onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Contract query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Contract withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Contract withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Contract withoutTrashed()
+ */
+	final class Contract extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Contract{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContractComment newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContractComment newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContractComment query()
+ */
+	final class ContractComment extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Contract{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $company_customer
+ * @property-read \App\Models\Entities\Company\Company|null $company_provider
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Document\Document> $documents
+ * @property-read int|null $documents_count
+ * @property-read \App\Models\Entities\Company\Company|null $responsible_receive
+ * @property-read \App\Models\Entities\Company\Company|null $responsible_supply
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Invoice newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Invoice newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Invoice query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Invoice withoutCreatorCompany()
+ */
+	final class Invoice extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Contract{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ObligationAdjustment newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ObligationAdjustment newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ObligationAdjustment query()
+ */
+	final class ObligationAdjustment extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Contract{
+/**
+ * @property-read \Kalnoy\Nestedset\Collection<int, Regulation> $children
+ * @property-read int|null $children_count
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read Regulation|null $parent
+ * @property-write mixed $parent_id
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation addContractsCount()
+ * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation ancestorsAndSelf($id, array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation ancestorsOf($id, array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation applyNestedSetScope(?string $table = null)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation countErrors()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation d()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation defaultOrder(string $dir = 'asc')
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation descendantsAndSelf($id, array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation descendantsOf($id, array $columns = [], $andSelf = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation fixSubtree($root)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation fixTree($root = null)
+ * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation getNodeData($id, $required = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation getPlainNodeData($id, $required = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation getTotalErrors()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation hasChildren()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation hasParent()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation isBroken()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation leaves(array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation makeGap(int $cut, int $height)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation moveNode($key, $position)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation newModelQuery()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Regulation onlyTrashed()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation orWhereAncestorOf(bool $id, bool $andSelf = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation orWhereDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation orWhereNodeBetween($values)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation orWhereNotDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation query()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation rebuildSubtree($root, array $data, $delete = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation rebuildTree(array $data, $delete = false, $root = null)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation reversed()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation root(array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereAncestorOf($id, $andSelf = false, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereAncestorOrSelf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereDescendantOf($id, $boolean = 'and', $not = false, $andSelf = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereDescendantOrSelf(string $id, string $boolean = 'and', string $not = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereIsAfter($id, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereIsBefore($id, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereIsLeaf()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereIsRoot()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereNodeBetween($values, $boolean = 'and', $not = false, $query = null)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation whereNotDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation withDepth(string $as = 'depth')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Regulation withTrashed()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation withoutCreatorCompany()
+ * @method static \Kalnoy\Nestedset\QueryBuilder<static>|Regulation withoutRoot()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Regulation withoutTrashed()
+ */
+	final class Regulation extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Document{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeField newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeField newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeField query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeField withoutCreatorCompany()
+ */
+	final class DoctypeField extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Document{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStructure newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStructure newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DoctypeStructure query()
+ */
+	class DoctypeStructure extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Document{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Document\DocumentLeftoverReservation> $documentLeftoverReservations
+ * @property-read int|null $document_leftover_reservations_count
+ * @property-read \App\Models\Entities\Document\DocumentType|null $documentType
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Goods\Goods> $goods
+ * @property-read int|null $goods_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Leftover\Leftover> $leftovers
+ * @property-read int|null $leftovers_count
+ * @property-read \App\Models\Entities\Logs\EntityLog|null $log
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Logs\EntityLog> $logs
+ * @property-read int|null $logs_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Document> $relatedDocuments
+ * @property-read int|null $related_documents_count
+ * @property-read \App\Models\Dictionaries\DocumentStatus|null $status
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Task\Task> $tasks
+ * @property-read int|null $tasks_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\TransportPlanning\TransportPlanning> $transport_plannings
+ * @property-read int|null $transport_plannings_count
+ * @property-read \App\Models\Entities\WarehouseComponents\Warehouse|null $warehouse
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Document newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Document newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Document onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Document query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Document withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Document withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Document withoutTrashed()
+ */
+	final class Document extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Document{
+/**
+ * @property-read \App\Models\Entities\Document\Document|null $document
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentLeftoverReservation newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentLeftoverReservation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentLeftoverReservation query()
+ */
+	class DocumentLeftoverReservation extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Document{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentRelation newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentRelation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentRelation query()
+ */
+	final class DocumentRelation extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Document{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Document\Document> $documents
+ * @property-read int|null $documents_count
+ * @property-read \App\Models\Dictionaries\DoctypeStatus|null $status
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentType onlyOrCurrentCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentType onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentType withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentType withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DocumentType withoutTrashed()
+ */
+	final class DocumentType extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Document{
+/**
+ * @property-read \App\Models\Entities\Container\ContainerRegister|null $container
+ * @property-read \App\Models\Entities\Document\Document|null $document
+ * @property-read \App\Models\Entities\Goods\Goods|null $goods
+ * @property-read \App\Models\Entities\Package|null $package
+ * @property-read \App\Models\User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|IncomeDocumentLeftover newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|IncomeDocumentLeftover newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|IncomeDocumentLeftover query()
+ */
+	class IncomeDocumentLeftover extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Document{
+/**
+ * @property-read \App\Models\Entities\Document\Document|null $document
+ * @property-read \App\Models\Entities\Leftover\Leftover|null $leftover
+ * @property-read \App\Models\Entities\Package|null $package
+ * @property-read \App\Models\User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OutcomeDocumentLeftover newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OutcomeDocumentLeftover newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OutcomeDocumentLeftover query()
+ */
+	class OutcomeDocumentLeftover extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Goods{
+/**
+ * @property \App\Enums\Goods\GoodsStatus $status_id
+ * @property-read \App\Models\Dictionaries\Adr|null $adr
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Barcode> $barcodes
+ * @property-read int|null $barcodes_count
+ * @property-read \App\Models\Entities\Company\Company|null $brandCompany
+ * @property-read \App\Models\Dictionaries\CargoType|null $cargo_type
+ * @property-read \App\Models\Entities\Categories|null $categories
+ * @property-read \App\Models\Entities\Categories|null $category
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-write mixed $expiration_date
+ * @property-read array $status
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Goods\GoodsKitItem> $goodsKitItems
+ * @property-read int|null $goods_kit_items_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Inventory\Inventory> $inventories
+ * @property-read int|null $inventories_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Leftover\Leftover> $leftovers
+ * @property-read int|null $leftovers_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\LeftoverErp\LeftoverErp> $leftoversErp
+ * @property-read int|null $leftovers_erp_count
+ * @property-read \App\Models\Entities\Company\Company|null $manufacturerCompany
+ * @property-read \App\Models\Entities\Address\Country|null $manufacturer_country
+ * @property-read \App\Models\Dictionaries\MeasurementUnit|null $measurement_unit
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Package> $packages
+ * @property-read int|null $packages_count
+ * @property-read \App\Models\Entities\Company\Company|null $providerCompany
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Goods newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Goods newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Goods onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Goods query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Goods withLeftoversTotals()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Goods withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Goods withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Goods withoutTrashed()
+ */
+	final class Goods extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Goods{
+/**
+ * @property-read \App\Models\Entities\Goods\Goods|null $goods
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsByDocument newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsByDocument newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsByDocument query()
+ */
+	final class GoodsByDocument extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Goods{
+/**
+ * @property-read \App\Models\Entities\Goods\Goods|null $goods
+ * @property-read \App\Models\Entities\Package|null $packages
+ * @property-read \App\Models\Entities\Goods\Goods|null $parentKit
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsKitItem newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsKitItem newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsKitItem onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsKitItem query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsKitItem withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsKitItem withoutTrashed()
+ */
+	class GoodsKitItem extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Goods{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsModification newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsModification newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|GoodsModification query()
+ */
+	final class GoodsModification extends \Eloquent {}
+}
+
+namespace App\Models\Entities{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Integration newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Integration newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Integration query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Integration withoutCreatorCompany()
+ */
+	final class Integration extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Inventory{
+/**
+ * Psalm fix for HasFactory generic:
+ *
+ * @use HasFactory<Inventory>
+ * @property-read \App\Models\Entities\Company\Company|null $brandData
+ * @property-read \App\Models\Entities\Categories|null $category
+ * @property-read \App\Models\Entities\WarehouseComponents\Cell|null $cell
+ * @property-read \App\Models\User|null $creator
+ * @property-write mixed $end_date
+ * @property-read string $process_cell_label
+ * @property-read string $status_label
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Goods\Goods> $goods
+ * @property-read int|null $goods_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Inventory\InventoryItem> $items
+ * @property-read int|null $items_count
+ * @property-read \App\Models\Entities\Company\Company|null $manufacturer
+ * @property-read \App\Models\Entities\Goods\Goods|null $nomenclature
+ * @property-read \App\Models\User|null $performer
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $performers
+ * @property-read int|null $performers_count
+ * @property-read \App\Models\Entities\WarehouseComponents\Row|null $row
+ * @property-read \App\Models\Entities\WarehouseComponents\Sector|null $sector
+ * @property-write mixed $start_date
+ * @property-read \App\Models\Entities\Company\Company|null $supplier
+ * @property-read \App\Models\Entities\WarehouseComponents\Warehouse|null $warehouse
+ * @property-read \App\Models\Entities\WarehouseComponents\WarehouseErp|null $warehouseErp
+ * @property-read \App\Models\Entities\WarehouseComponents\WarehouseZone|null $zone
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Inventory newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Inventory newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Inventory onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Inventory query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Inventory withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Inventory withoutTrashed()
+ */
+	class Inventory extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Inventory{
+/**
+ * @property \App\Enums\Inventory\InventoryItemStatus $status
+ * @property-read \App\Models\Entities\WarehouseComponents\Cell|null $cell
+ * @property-read \App\Models\User|null $creator
+ * @property-read string $status_label
+ * @property-read \App\Models\Entities\Inventory\Inventory|null $inventory
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Inventory\InventoryLeftover> $inventoryLeftovers
+ * @property-read int|null $inventory_leftovers_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Leftover\Leftover> $leftovers
+ * @property-read int|null $leftovers_count
+ * @property-read \App\Models\User|null $updater
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryItem beforeInventory()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryItem forCell(string $cellId)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryItem forInventory(string $inventoryId)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryItem inventoried()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryItem newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryItem newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryItem query()
+ */
+	class InventoryItem extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Inventory{
+/**
+ * @property-read \App\Models\User|null $creator
+ * @property-read \App\Models\Entities\Goods\Goods|null $goods
+ * @property-read \App\Models\Entities\Inventory\InventoryItem|null $inventoryItem
+ * @property-read \App\Models\Entities\Leftover\Leftover|null $leftover
+ * @property-read \App\Models\Entities\Package|null $package
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryLeftover existing()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryLeftover newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryLeftover newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryLeftover newlyCreated()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryLeftover query()
+ */
+	class InventoryLeftover extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Inventory{
+/**
+ * Inventory manual change log for leftovers.
+ * 
+ * Columns:
+ *  - id               (bigint, PK)
+ *  - leftover_id      (uuid, FK -> leftovers.id)
+ *  - quantity_before  (decimal(18,3)|null)
+ *  - quantity_after   (decimal(18,3)|null)
+ *  - area             (varchar(64)|null)
+ *  - executor_id      (uuid|null)
+ *  - group_id         (uuid|null)
+ *  - group_type       (varchar(64)|null)
+ *  - created_at       (timestamp)
+ *
+ * @property-read \App\Models\User|null $executor
+ * @property-read string|null $changed_quantity
+ * @property-read \App\Models\Entities\Leftover\Leftover|null $leftover
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryManualLeftoverLog between(?\Illuminate\Support\Carbon $from, ?\Illuminate\Support\Carbon $to)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryManualLeftoverLog byExecutor(?string $executorId)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryManualLeftoverLog forLeftover(string $leftoverId)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryManualLeftoverLog latestFirst()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryManualLeftoverLog newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryManualLeftoverLog newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InventoryManualLeftoverLog query()
+ */
+	class InventoryManualLeftoverLog extends \Eloquent {}
+}
+
+namespace App\Models\Entities\LeftoverErp{
+/**
+ * Leftover erp.
+ *
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \App\Models\Entities\Goods\Goods|null $goods
+ * @property-read \App\Models\Entities\Logs\EntityLog|null $log
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Logs\EntityLog> $logs
+ * @property-read int|null $logs_count
+ * @property-read \App\Models\Entities\WarehouseComponents\WarehouseErp|null $warehouseErp
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverErp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverErp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverErp onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverErp query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverErp withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverErp withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverErp withoutTrashed()
+ */
+	final class LeftoverErp extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Leftover{
+/**
+ * Leftover.
+ *
+ * @property \App\Enums\Leftovers\LeftoversStatus $status_id
+ * @property-read \App\Models\Entities\WarehouseComponents\Cell|null $cell
+ * @property-read \App\Models\Entities\Container\ContainerRegister|null $container
+ * @property-read \App\Models\Entities\Logs\EntityLog|null $createdLog
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \App\Models\Entities\Leftover\Leftover|null $child
+ * @property-read \App\Models\Entities\Leftover\Leftover|null $parent
+ * @property-read array $status
+ * @property-read \App\Models\Entities\Goods\Goods|null $goods
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Leftover\LeftoverToContainerRegister> $goodsToContainers
+ * @property-read int|null $goods_to_containers_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Inventory\InventoryItem> $inventoryItems
+ * @property-read int|null $inventory_items_count
+ * @property-read \App\Models\Entities\Inventory\InventoryManualLeftoverLog|null $latestManualLog
+ * @property-read \App\Models\Entities\Logs\EntityLog|null $log
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Logs\EntityLog> $logs
+ * @property-read int|null $logs_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Inventory\InventoryManualLeftoverLog> $manualLogs
+ * @property-read int|null $manual_logs_count
+ * @property-read \App\Models\Entities\Package|null $package
+ * @property-read \App\Models\Entities\WarehouseComponents\Warehouse|null $warehouse
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Leftover inCurrentWarehouse()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Leftover newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Leftover newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Leftover onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Leftover query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Leftover withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Leftover withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Leftover withoutTrashed()
+ */
+	final class Leftover extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Leftover{
+/**
+ * @property-read \App\Models\Entities\Container\ContainerRegister|null $containerRegister
+ * @property-read \App\Models\Entities\Leftover\Leftover|null $leftover
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverToContainerRegister newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverToContainerRegister newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverToContainerRegister onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverToContainerRegister query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverToContainerRegister withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeftoverToContainerRegister withoutTrashed()
+ */
+	class LeftoverToContainerRegister extends \Eloquent {}
+}
+
+namespace App\Models\Entities{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @property-read \App\Models\Entities\Address\Country|null $country
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \App\Models\Entities\Address\Settlement|null $settlement
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Location newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Location newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Location onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Location query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Location withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Location withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Location withoutTrashed()
+ */
+	class Location extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Logs{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $entity
+ * @property-read \App\Models\User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|EntityLog newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|EntityLog newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|EntityLog query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|EntityLog withoutCreatorCompany()
+ */
+	class EntityLog extends \Eloquent {}
+}
+
+namespace App\Models\Entities{
+/**
+ * @property-read \App\Models\Entities\Barcode|null $barcode
+ * @property-read Package|null $child
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read string|null $barcode_string
+ * @property-read bool $can_edit
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Document\IncomeDocumentLeftover> $income_document_leftovers
+ * @property-read int|null $income_document_leftovers_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Leftover\Leftover> $leftovers
+ * @property-read int|null $leftovers_count
+ * @property-read Package|null $parent
+ * @property-read \App\Models\Dictionaries\PackageType|null $type
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Package newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Package newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Package query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Package withoutCreatorCompany()
+ */
+	final class Package extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Pallet{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Pallet newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Pallet newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Pallet query()
+ */
+	final class Pallet extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Pallet{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PalletRegister newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PalletRegister newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PalletRegister query()
+ */
+	final class PalletRegister extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Schedule{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Schedule newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Schedule newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Schedule query()
+ */
+	final class Schedule extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Schedule{
+/**
+ * @property-read \App\Models\Dictionaries\ExceptionType|null $type
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ScheduleException newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ScheduleException newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ScheduleException query()
+ */
+	final class ScheduleException extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Schedule{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SchedulePattern newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SchedulePattern newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SchedulePattern query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SchedulePattern withoutCreatorCompany()
+ */
+	final class SchedulePattern extends \Eloquent {}
+}
+
+namespace App\Models\Entities\System{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Bookmark newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Bookmark newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Bookmark query()
+ */
+	final class Bookmark extends \Eloquent {}
+}
+
+namespace App\Models\Entities\System{
+/**
+ * @property-read \App\Models\User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FileLoad newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FileLoad newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FileLoad query()
+ */
+	final class FileLoad extends \Eloquent {}
+}
+
+namespace App\Models\Entities\System{
+/**
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Company\Company> $companies
+ * @property-read int|null $companies_count
+ * @property-read \App\Models\User|null $owner
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $usersInWorkspace
+ * @property-read int|null $users_in_workspace_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Workspace filterCompaniesByUser($userId)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Workspace newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Workspace newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Workspace onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Workspace query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Workspace relations()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Workspace withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Workspace withoutTrashed()
+ */
+	final class Workspace extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Task{
+/**
+ * @property \App\Enums\Task\TaskStatus $status
+ * @property \App\Enums\Task\TaskFormationType $formation_type
+ * @property-read \App\Models\Entities\WarehouseComponents\Cell|null $cell
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \App\Models\Entities\Document\Document|null $document
+ * @property-read mixed $executor_users
+ * @property-read mixed $status_info
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Task\TaskItem> $items
+ * @property-read int|null $items_count
+ * @property-read \App\Models\Entities\Logs\EntityLog|null $log
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Logs\EntityLog> $logs
+ * @property-read int|null $logs_count
+ * @property-read \App\Models\Entities\Task\TaskType|null $type
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task inCurrentWarehouse()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task withoutTrashed()
+ */
+	class Task extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Task{
+/**
+ * @property-read \App\Models\Entities\Task\Task|null $task
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskItem newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskItem newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskItem query()
+ */
+	class TaskItem extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Task{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskLog newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskLog newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskLog query()
+ */
+	class TaskLog extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Task{
+/**
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskType whereLocales(string $column, array $locales)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TaskType withoutCreatorCompany()
+ */
+	class TaskType extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Terminal{
+/**
+ * @property-read \App\Models\Entities\Container\ContainerRegister|null $container
+ * @property-read \App\Models\Entities\Document\Document|null $document
+ * @property-read \App\Models\Entities\Leftover\Leftover|null $leftover
+ * @property-read \App\Models\Entities\Package|null $package
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TerminalLeftoverLog newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TerminalLeftoverLog newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TerminalLeftoverLog query()
+ */
+	class TerminalLeftoverLog extends \Eloquent {}
+}
+
+namespace App\Models\Entities\TransportPlanning{
+/**
+ * @property-read \App\Models\Entities\Transport\AdditionalEquipment|null $additional_equipment
+ * @property-read \App\Models\Entities\Company\Company|null $carrier
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Document\Document> $documents
+ * @property-read int|null $documents_count
+ * @property-read \App\Models\User|null $driver
+ * @property-read \App\Models\Entities\Company\Company|null $payer
+ * @property-read \App\Models\Entities\Company\Company|null $provider
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Dictionaries\TransportPlanningStatus> $statuses
+ * @property-read int|null $statuses_count
+ * @property-read \App\Models\Entities\Transport\Transport|null $transport
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanning filterByDocumentsDate($date)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanning newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanning newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanning query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanning relations()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanning relationsByDate($date)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanning withoutCreatorCompany()
+ */
+	final class TransportPlanning extends \Eloquent {}
+}
+
+namespace App\Models\Entities\TransportPlanning{
+/**
+ * @property-read \App\Models\Entities\Document\Document|null $document
+ * @property-read \App\Models\Entities\TransportPlanning\TransportPlanning|null $transport_planing
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningDocument newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningDocument newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningDocument query()
+ */
+	final class TransportPlanningDocument extends \Eloquent {}
+}
+
+namespace App\Models\Entities\TransportPlanning{
+/**
+ * @property-read \App\Models\Dictionaries\TransportPlanningToStatus|null $status
+ * @property-read \App\Models\Dictionaries\TransportPlanningFailureType|null $type
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailure newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailure newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TransportPlanningFailure query()
+ */
+	final class TransportPlanningFailure extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Transport{
+/**
+ * @property-read \App\Models\Dictionaries\Adr|null $adr
+ * @property-read \App\Models\Dictionaries\AdditionalEquipmentBrand|null $brand
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @property-read \App\Models\Entities\Address\Country|null $country
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \App\Models\Dictionaries\AdditionalEquipmentModel|null $model
+ * @property-read \App\Models\Entities\Transport\Transport|null $transport
+ * @property-read \App\Models\Dictionaries\TransportType|null $type
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipment addFullName()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipment newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipment newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipment onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipment query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipment withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipment withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalEquipment withoutTrashed()
+ */
+	final class AdditionalEquipment extends \Eloquent {}
+}
+
+namespace App\Models\Entities\Transport{
+/**
+ * @property-read \App\Models\Dictionaries\Adr|null $adr
+ * @property-read \App\Models\Dictionaries\TransportBrand|null $brand
+ * @property-read \App\Models\Dictionaries\TransportCategory|null $category
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @property-read \App\Models\Entities\Address\Country|null $country
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \App\Models\User|null $driver
+ * @property-read \App\Models\Entities\Transport\AdditionalEquipment|null $equipment
+ * @property-read \App\Models\Dictionaries\TransportModel|null $model
+ * @property-read \App\Models\Dictionaries\TransportType|null $type
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Transport addFullName()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Transport newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Transport newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Transport onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Transport query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Transport withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Transport withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Transport withoutTrashed()
+ */
+	final class Transport extends \Eloquent {}
+}
+
+namespace App\Models\Entities\User{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LoginHistory newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LoginHistory newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LoginHistory query()
+ */
+	final class LoginHistory extends \Eloquent {}
+}
+
+namespace App\Models\Entities\User{
+/**
+ * UserWorkingData.
+ *
+ * @property-read \App\Models\Entities\Company\Company|null $company
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Schedule\ScheduleException> $conditions
+ * @property-read int|null $conditions_count
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \App\Models\Entities\WarehouseComponents\Warehouse|null $currentWarehouse
+ * @property-read \App\Models\Entities\WarehouseComponents\Warehouse|null $currentWarehouseApp
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Permission> $permissions
+ * @property-read int|null $permissions_count
+ * @property-read \App\Models\Dictionaries\Position|null $position
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Role> $role
+ * @property-read int|null $role_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Role> $roles
+ * @property-read int|null $roles_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Schedule\Schedule> $schedule
+ * @property-read int|null $schedule_count
+ * @property-read \App\Models\User|null $user
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Warehouse> $warehouses
+ * @property-read int|null $warehouses_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData permission($permissions, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData role($roles, $guard = null, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData withoutPermission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData withoutRole($roles, $guard = null)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserWorkingData withoutTrashed()
+ */
+	final class UserWorkingData extends \Eloquent {}
+}
+
+namespace App\Models\Entities\User{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VerificationCodes newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VerificationCodes newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VerificationCodes query()
+ */
+	final class VerificationCodes extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents{
+/**
+ * @property \App\Enums\Cells\CellStatus $status
+ * @property-read array $allocation
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Leftover\Leftover> $leftovers
+ * @property-read int|null $leftovers_count
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $parent
+ * @property-read \App\Models\Entities\WarehouseComponents\RowCellInfo|null $rowInfo
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cell inCurrentWarehouse()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cell newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cell newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cell onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cell query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cell withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cell withoutTrashed()
+ */
+	final class Cell extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents{
+/**
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Cell> $cells
+ * @property-read int|null $cells_count
+ * @property-read \App\Models\Entities\WarehouseComponents\Sector|null $sector
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Row newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Row newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Row onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Row query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Row withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Row withoutTrashed()
+ */
+	final class Row extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents{
+/**
+ * @property-read \App\Models\Entities\WarehouseComponents\Cell|null $cell
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RowCellInfo newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RowCellInfo newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RowCellInfo onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RowCellInfo query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RowCellInfo withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RowCellInfo withoutTrashed()
+ */
+	class RowCellInfo extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents{
+/**
+ * Sector.
+ *
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Cell> $cells
+ * @property-read int|null $cells_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Row> $rows
+ * @property-read int|null $rows_count
+ * @property-read \App\Models\Entities\WarehouseComponents\Warehouse|null $warehouse
+ * @property-read \App\Models\Entities\WarehouseComponents\WarehouseZone|null $zone
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sector newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sector newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sector onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sector query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sector withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sector withoutTrashed()
+ */
+	final class Sector extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents{
+/**
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Schedule\ScheduleException> $conditions
+ * @property-read int|null $conditions_count
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\WarehouseErp> $erpWarehouses
+ * @property-read int|null $erp_warehouses_count
+ * @property-read \App\Models\Entities\Location|null $location
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Schedule\Schedule> $schedule
+ * @property-read int|null $schedule_count
+ * @property-read \App\Models\Dictionaries\WarehouseType|null $type
+ * @property-read \App\Models\User|null $user
+ * @property-read \App\Models\Entities\WarehouseComponents\WarehouseErp|null $warehouseErp
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\WarehouseZone> $zones
+ * @property-read int|null $zones_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warehouse newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warehouse newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warehouse onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warehouse query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warehouse withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warehouse withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Warehouse withoutTrashed()
+ */
+	final class Warehouse extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents{
+/**
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Warehouse> $warehouses
+ * @property-read int|null $warehouses_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseErp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseErp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseErp onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseErp query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseErp withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseErp withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseErp withoutTrashed()
+ */
+	class WarehouseErp extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents{
+/**
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Cell> $cells
+ * @property-read int|null $cells_count
+ * @property-read \App\Models\Entities\Company\Company|null $creatorCompany
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Sector> $sectors
+ * @property-read int|null $sectors_count
+ * @property-read \App\Models\Entities\WarehouseComponents\Warehouse|null $warehouse
+ * @property-read \App\Models\Entities\WarehouseComponents\Zone\ZoneSubtype|null $zoneSubtype
+ * @property-read \App\Models\Entities\WarehouseComponents\Zone\ZoneType|null $zoneType
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseZone newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseZone newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseZone onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseZone query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseZone withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseZone withoutCreatorCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WarehouseZone withoutTrashed()
+ */
+	class WarehouseZone extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents\Zone{
+/**
+ * ZoneSubtype.
+ *
+ * @property-read string $translated_name
+ * @property-read mixed $translations
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Zone\ZoneType> $types
+ * @property-read int|null $types_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneSubtype newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneSubtype newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneSubtype query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneSubtype whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneSubtype whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneSubtype whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneSubtype whereLocales(string $column, array $locales)
+ */
+	class ZoneSubtype extends \Eloquent {}
+}
+
+namespace App\Models\Entities\WarehouseComponents\Zone{
+/**
+ * ZoneType.
+ *
+ * @property-read string $translated_name
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\WarehouseComponents\Zone\ZoneSubtype> $subtypes
+ * @property-read int|null $subtypes_count
+ * @property-read mixed $translations
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneType whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneType whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneType whereLocale(string $column, string $locale)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ZoneType whereLocales(string $column, array $locales)
+ */
+	class ZoneType extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * User.
+ *
+ * @property-read \App\Models\Entities\User\UserWorkingData|null $allWorkingData
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Schedule\ScheduleException> $conditions
+ * @property-read int|null $conditions_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Company\Company> $createdCompanies
+ * @property-read int|null $created_companies_count
+ * @property-read \App\Models\Entities\System\Workspace|null $current_workspace
+ * @property-read string|null $current_warehouse_id
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
+ * @property-read int|null $notifications_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\Schedule\Schedule> $schedule
+ * @property-read int|null $schedule_count
+ * @property-write mixed $pin
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
+ * @property-read int|null $tokens_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\System\Workspace> $usersInWorkspace
+ * @property-read int|null $users_in_workspace_count
+ * @property-read \App\Models\Entities\WarehouseComponents\Warehouse|null $warehouse
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Entities\System\Workspace> $workspaces
+ * @property-read int|null $workspaces_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User addFullName()
+ * @method static \Database\Factories\UserFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User filterByWorkspace()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User sameCompany()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User withWorkingData()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User withoutCompanyFilter()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User withoutTrashed()
+ */
+	final class User extends \Eloquent implements \Tymon\JWTAuth\Contracts\JWTSubject {}
+}
+

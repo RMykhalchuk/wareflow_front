@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+// --------------- User New start
+
+.card-data {
+    & > div:nth-child(odd) {
+        background-color: #4b465c05;
+    }
+}
+
+.send_email {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+
+// --------------- User New end
+
+// --------------- Calendar start
+
+.button-calendar {
+    padding: 3px !important;
+}
+
+.css-calendar-table.table:not(.table-dark):not(.table-light) thead:not(.table-dark) th,
+.table:not(.table-dark):not(.table-light) tfoot:not(.table-dark) th {
+    background-color: #fff;
+}
+
+// --------------- Calendar end
+
+//maybe unused
+.generate-code-button {
+    box-sizing: border-box;
+    margin-top: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    width: 235px;
+    height: 38px;
+
+    border: 1px solid #d9b414;
+    border-radius: 6px;
+    color: #d9b414;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.generate-code-button:hover {
+    background: rgba(217, 180, 20, 0.08);
+    border: 1px solid #d9b414;
+    color: #d9b414;
+}
+
+.generate-code-button:active {
+    background: rgba(217, 180, 20, 0.16) !important;
+    border: 1px solid #d9b414 !important;
+    border-radius: 6px !important;
+    color: #d9b414 !important;
+}

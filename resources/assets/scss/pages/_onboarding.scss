@@ -1,0 +1,140 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+// --------------- Onboarding  start
+
+#personal-info-user .form-control:disabled {
+    background-color: #fff;
+    opacity: 1;
+}
+
+.onboarding-item-company {
+    // &:hover {
+    //     box-shadow: 0px 4px 16px rgba(165, 163, 174, 0.45);
+    // }
+
+    .send-join &:hover {
+        box-shadow: none !important;
+        cursor: auto !important;
+    }
+
+    .chosen-company &:hover {
+        box-shadow: none !important;
+        cursor: auto !important;
+    }
+}
+
+.onboarding-radio-card {
+    border: 1px solid #dbdade;
+    border-radius: 6px;
+}
+
+// --------------- Onboarding  end
+
+// styles for input number country
+.inpSelectNumCountry .input-number-country {
+    padding-left: 80px !important;
+}
+
+.inpSelectNumCountry .iti__flag {
+    margin-right: 15px;
+}
+
+.inpSelectNumCountry .iti__flag-container {
+    width: 75px;
+    margin-right: 5px;
+    padding-left: 10px;
+}
+
+.inpSelectNumCountry .iti__selected-flag {
+    border-right: 1px solid #ccc;
+}
+
+.inpSelectNumCountry .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background-color: transparent !important;
+}
+
+.inpSelectNumCountry .iti__country-list {
+    z-index: 2 !important;
+}
+
+// інпут в онбордингу тільки на країни
+.inpSelectCountry .iti__dial-code {
+    display: none;
+}
+
+.inpSelectCountry .iti {
+    flex: auto;
+}
+
+.inpSelectCountry .form-control {
+    padding-left: 80px !important;
+    border-end-end-radius: 0 !important;
+    border-start-end-radius: 0 !important;
+}
+
+.inpSelectCountry .iti__flag {
+    margin-right: 15px;
+}
+
+.inpSelectCountry .iti__flag-container {
+    width: 75px;
+    margin-right: 5px;
+    padding-left: 10px;
+}
+
+.inpSelectCountry .iti__selected-flag {
+    border-right: 1px solid #ccc;
+}
+
+.inpSelectCountry .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background-color: transparent !important;
+}
+
+// onboarding
+
+.personal-info-user,
+.find-company,
+.create-company,
+.create-workspace,
+.send-join {
+    padding: 38px 144px;
+    // `sm` applies to x-small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+    }
+
+    // `md` applies to small devices (landscape phones, less than 768px)
+    @media (max-width: 767.98px) {
+    }
+
+    // `lg` applies to medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) {
+    }
+
+    // `xl` applies to large devices (desktops, less than 1200px)
+    @media (max-width: 1199.98px) {
+        padding: 38px 70px !important;
+    }
+
+    // `xxl` applies to x-large devices (large desktops, less than 1400px)
+    @media (max-width: 1399.98px) {
+        padding: 38px 100px;
+    }
+}
+
+.next-find-company {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 135px !important;
+    // `lg` applies to medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) {
+        margin-top: 0 !important;
+    }
+}
+
+//onboarding disabled inputs style
+#personal-info-user .form-control:disabled {
+    background-color: #efefef !important;
+    opacity: 1 !important;
+}

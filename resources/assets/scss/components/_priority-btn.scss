@@ -1,0 +1,66 @@
+$priority-groups: (
+    group1: (
+        values: 0 1 2,
+        color: #00cfe8,
+    ),
+    group2: (
+        values: 3 4 5,
+        color: #28c76f,
+    ),
+    group3: (
+        values: 6 7 8,
+        color: #ff9f43,
+    ),
+    group4: (
+        values: 9 10,
+        color: #ea5455,
+    ),
+);
+
+.priority-btn {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-weight: 500;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.85;
+    }
+
+    &.active {
+        color: #fff;
+    }
+}
+
+.priority-container {
+    display: flex;
+
+    .priority-btn {
+        display: none;
+
+        &.show {
+            display: inline-block;
+        }
+    }
+}
+
+// Підсвічування груп кольором
+@each $group, $data in $priority-groups {
+    $values: map-get($data, values);
+    $color: map-get($data, color);
+
+    @each $value in $values {
+        .priority-btn[data-value='#{$value}'] {
+            border-color: $color;
+        }
+
+        .priority-btn.active[data-value='#{$value}'] {
+            background-color: $color;
+            border-color: $color;
+        }
+    }
+}

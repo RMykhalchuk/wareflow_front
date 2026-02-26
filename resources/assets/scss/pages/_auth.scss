@@ -1,0 +1,121 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+// old auth
+.input_label {
+    height: 16px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.welcome {
+    margin-top: 165px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+.reset {
+    margin-top: 238px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+.login_hint {
+    margin-top: 15px;
+    height: 22px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.reset_hint {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    width: 400px;
+    height: 44px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.enter-button {
+    background: #d9b414 !important;
+    border-color: #d9b414 !important;
+    margin-top: 36px;
+    color: #fff !important;
+}
+
+.reset-margin {
+    margin-top: 213px;
+}
+
+.forgot-password {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.43px;
+    color: #d9b414;
+
+    --bs-btn-font-weight: 400;
+    --bs-btn-color: #d9b414;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: #d9b414;
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-active-color: #d9b414;
+    --bs-btn-active-border-color: transparent;
+    --bs-btn-disabled-color: #b8c2cc;
+    --bs-btn-disabled-border-color: transparent;
+    --bs-btn-box-shadow: none;
+    --bs-btn-focus-shadow-rgb: 136, 126, 242;
+    text-decoration: none;
+}
+// end auth old
+
+.auth_content {
+    max-width: 1152px;
+    max-height: 800px;
+    box-shadow: 0px 4px 18px 0px #4b465c1a;
+    border-radius: 4px;
+}
+
+.auth {
+    &__imgContainer {
+        background-color: rgba(217, 180, 20, 0.03);
+    }
+}
+
+.add_shadow {
+    box-shadow: 0px 4px 18px 0px #4b465c1a;
+    border-radius: 4px;
+}
+
+// стиль для інпута ( провірка кодом)
+.otp__input {
+    width: 60px;
+    height: 60px;
+}

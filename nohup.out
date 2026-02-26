@@ -1,0 +1,8 @@
+
+> work
+> sudo ./vendor/bin/sail artisan queue:work
+
+  2024-01-29 16:29:04 App\Jobs\SendVerificationCode .................. RUNNING
+  2024-01-29 16:29:07 App\Jobs\SendVerificationCode .......... 2,648.87ms DONE
+time="2024-01-29T14:30:44Z" level=error msg="got 3 SIGTERM/SIGINTs, forcing shutdown"
+canceled

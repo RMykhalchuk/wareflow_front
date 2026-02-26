@@ -1,0 +1,34 @@
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="cha">
+<g id="Rectangle">
+<rect x="4.58337" y="3.66406" width="3.66667" height="14.6667" rx="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="4.58337" y="3.66406" width="3.66667" height="14.6667" rx="1" stroke="white" stroke-opacity="0.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Rectangle_2">
+<rect x="8.25" y="3.66406" width="3.66667" height="14.6667" rx="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="8.25" y="3.66406" width="3.66667" height="14.6667" rx="1" stroke="white" stroke-opacity="0.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Path">
+<path d="M4.58337 7.33333H8.25004" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.58337 7.33333H8.25004" stroke="white" stroke-opacity="0.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Path_2">
+<path d="M8.25 14.6693H11.9167" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.25 14.6693H11.9167" stroke="white" stroke-opacity="0.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Group">
+<g id="Rectangle_3">
+<rect x="12.1475" y="4.26562" width="3.66667" height="14.6667" rx="1" transform="rotate(-13 12.1475 4.26562)" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="12.1475" y="4.26562" width="3.66667" height="14.6667" rx="1" transform="rotate(-13 12.1475 4.26562)" stroke="white" stroke-opacity="0.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Path_3">
+<path d="M12.9724 7.83721L16.5451 7.01239" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.9724 7.83721L16.5451 7.01239" stroke="white" stroke-opacity="0.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Path_4">
+<path d="M14.6219 14.9856L18.1946 14.1608" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.6219 14.9856L18.1946 14.1608" stroke="white" stroke-opacity="0.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>

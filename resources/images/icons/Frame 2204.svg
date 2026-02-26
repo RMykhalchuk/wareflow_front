@@ -1,0 +1,21 @@
+<svg width="30" height="38" viewBox="0 0 30 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16.5" cy="14.5" r="1.5" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="16.5" cy="14.5" r="1.5" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 14.5H15" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 14.5H15" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 14.5H21" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 14.5H21" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="12" cy="19" r="1.5" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="12" cy="19" r="1.5" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 19H10.5" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 19H10.5" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.5 19H21" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.5 19H21" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="18.75" cy="23.5" r="1.5" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="18.75" cy="23.5" r="1.5" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 23.5H17.25" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 23.5H17.25" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.25 23.5H21" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.25 23.5H21" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="25" cy="8" r="2" fill="#D9B414"/>
+</svg>

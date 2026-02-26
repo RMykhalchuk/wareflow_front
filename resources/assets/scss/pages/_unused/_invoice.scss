@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+// invoice table
+.item-selected-correction-hover {
+    transition: all 0.2 0.7s ease;
+
+    &:hover {
+        background-color: #4b465c05;
+    }
+}

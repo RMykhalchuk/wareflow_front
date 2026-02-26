@@ -1,0 +1,56 @@
+.select2-selection.select2-selection--multiple
+    > .select2-selection__rendered
+    > .select2-search
+    > input:focus {
+    box-shadow: none !important;
+}
+
+.select2-selection.select2-selection--multiple
+    > .select2-selection__rendered
+    > .select2-search--inline {
+    display: contents;
+}
+
+.select2-selection.select2-selection--multiple
+    > .select2-selection__rendered
+    > .select2-search
+    > .select2-search__field {
+    width: 100%;
+    padding-left: 9px !important;
+}
+
+.select2-selection.select2-selection--multiple
+    > .select2-selection__rendered
+    > .select2-search
+    > .select2-search__field::placeholder {
+    color: #999;
+}
+
+.select2-dropdown {
+    z-index: 6000 !important;
+}
+
+.select2-container--classic.select2-container--open,
+.select2-container--default.select2-container--open {
+    z-index: 10001;
+}
+
+//Update form-validation for success
+form .select2.success + .select2-container--classic .select2-selection--single,
+form .select2.success + .select2-container--default .select2-selection--single,
+form .select2.success + .select2-container--classic .select2-selection--multiple,
+form .select2.success + .select2-container--default .select2-selection--multiple {
+    border-color: #28c76f !important;
+}
+
+div.js-error-select2 .select2.error + .select2-container--classic .select2-selection--single,
+div.js-error-select2 .select2.error + .select2-container--default .select2-selection--single,
+div.js-error-select2 .select2.error + .select2-container--classic .select2-selection--multiple,
+div.js-error-select2 .select2.error + .select2-container--default .select2-selection--multiple {
+    border-color: #ea5455 !important;
+}
+// фікс для мульселекті дефолтних поки не інціалізуєтьс основний
+.default-height-fix {
+    max-height: 38px; /* висота списку */
+    overflow-y: auto; /* додає скрол, якщо елемент перевищує max-height */
+}

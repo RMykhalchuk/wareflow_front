@@ -1,0 +1,132 @@
+@use '../abstracts';
+
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+//html {
+//    box-sizing: border-box;
+//}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+//*,
+//*::before,
+//*::after {
+//    box-sizing: inherit;
+//}
+
+/**
+ * Basic styles for links
+ */
+//a {
+//    color: abstracts.$brand-color;
+//    text-decoration: none;
+//
+//    @include abstracts.on-event {
+//        color: abstracts.$text-color;
+//        text-decoration: underline;
+//    }
+//}
+
+// --------------- Variable start
+.card {
+    --bs-card-bg: #fff !important;
+}
+
+.modal {
+    --bs-modal-bg: #fff !important;
+}
+
+// --------------- Variable end
+
+::selection {
+    background: #d9b414 !important;
+    color: #fff !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.content-body {
+    padding-bottom: 1px;
+}
+
+.content {
+    margin-left: 0 !important;
+}
+
+input:focus {
+    border-color: #d9b414 !important;
+    box-shadow: 0px 2px 4px rgba(165, 163, 174, 0.3) !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+
+.bg-secondary-100 {
+    background-color: #f8f8f8;
+}
+
+.px-2-5 {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
+}
+
+.copy-wrapper .copy-btn {
+    display: none;
+}
+
+.copy-wrapper:hover .copy-btn {
+    display: block;
+}
+
+.border-dashed {
+    border: 2px dashed #dbdade;
+}
+
+.no-caret::after {
+    display: none !important;
+    content: none !important;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.border-radius-50 {
+    border-radius: 50% !important;
+}
+
+.border-radius-15 {
+    border-radius: 15% !important;
+}
+
+.border-error {
+    border-color: #e35d6a;
+}
+
+.list-s-none {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.underline-on-hover:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the warehouse entity.
+// -----------------------------------------------------------------------------
+
+.message_add {
+    display: none;
+    width: 100%;
+    height: 46px;
+
+    background: rgba(40, 199, 111, 0.16);
+
+    border: 1px solid rgba(40, 199, 111, 0.16);
+    border-radius: 6px;
+    font-weight: 500;
+    color: #28c76f;
+
+    justify-content: start;
+    align-items: center;
+    padding-left: 14px;
+}
+
+.message_addError {
+    display: none;
+    width: 100%;
+    height: 46px;
+
+    background: #f8d7da;
+
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #721c24;
+
+    justify-content: start;
+    align-items: center;
+    padding-left: 14px;
+}
+
+.leaflet-bottom,
+.leaflet-top {
+    display: none !important;
+}
+
+.leaflet-map {
+    max-height: 100% !important;
+    // height: 478px !important;
+}

@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.horizontal-menu .header-navbar.navbar-horizontal ul#main-menu-navigation > li:hover > a {
+    background: rgba(217, 180, 20, 0.08);
+    color: #d9b414 !important;
+    border-radius: 4px !important;
+}
+
+//navbar
+
+.sidenav-overlay {
+    z-index: 10000 !important;
+}
+
+.modal {
+    z-index: 10001 !important;
+}
+
+.modal-backdrop {
+    z-index: 10000 !important;
+}
+
+//navbar
+.nav-link-burger-c {
+    transform: scale(1.6);
+
+    &:hover,
+    &:focus {
+        color: #d9b414;
+    }
+}
+
+.custom-padding {
+    padding: 0.715rem 1.25rem !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0 !important;
+}
+
+ul#main-menu-navigation > li .type-svg {
+    margin-right: 0.5rem;
+    height: 22px;
+    width: 22px;
+    font-size: 1.2rem;
+}
+
+ul#main-menu-navigation > li span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.nav-title {
+    word-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+.nav-tabs .nav-link.active {
+    color: #f8f9fa;
+    background: #d9b414;
+    box-shadow: 0 2px 4px rgba(165, 163, 174, 0.3);
+    border-radius: 6px;
+}
+
+.active-nav-log-confirmed {
+    color: #a8aaae !important;
+    background-color: rgba(168, 170, 174, 0.16) !important;
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}

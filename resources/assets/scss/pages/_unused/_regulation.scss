@@ -1,0 +1,81 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+// --------------- Regulation start
+
+.list-group-item {
+    display: flex;
+}
+
+// --------------- Regulation end
+
+.css-entity-regulation .accordion-button:not(.collapsed) {
+    background-color: #ffffff;
+}
+
+// --------------- Regulation and residue
+
+.list-group {
+    border-radius: 0;
+}
+
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    background-color: #ffffff;
+}
+
+.list-group-item:hover {
+    background-color: rgba(168, 170, 174, 0.08);
+}
+
+.list-group-item:active {
+    background: rgba(168, 170, 174, 0.16);
+}
+
+.list-group-item-parent:hover,
+.list-group-item-child:hover {
+    background-color: rgba(168, 170, 174, 0.08);
+}
+
+.list-group-item-parent:active,
+.list-group-item-child:active {
+    background: rgba(168, 170, 174, 0.16);
+}
+
+#list {
+    padding-left: 0;
+}
+
+#dropdown-menu-type {
+    padding: 0;
+    line-height: 2em;
+}
+
+.dropdown-item-type {
+    text-align: center;
+}
+
+.type-card-margin {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.list-group:hover {
+    cursor: pointer;
+}
+
+.accordion-button,
+.accordion-button + .delete-btn {
+    background-color: rgba(168, 170, 174, 0.08);
+}
+
+.collapsed,
+.collapsed + .delete-btn {
+    background-color: #ffffff;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(168, 170, 174, 0.08);
+}

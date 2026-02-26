@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+// --------------- Type-goods start
+
+.accordion-button-custom::before {
+    flex-shrink: 0;
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    margin-right: 10px; /* Змінено з margin-left на margin-right */
+    content: ''; /* Змінено з "::after Плитка" на порожній рядок */
+    background-image: var(--bs-accordion-btn-icon);
+    background-repeat: no-repeat;
+    background-size: var(--bs-accordion-btn-icon-width);
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.accordion-button-custom.accordion-button:not(.collapsed)::before {
+    background-image: var(--bs-accordion-btn-active-icon);
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+
+.accordion-button-custom.accordion-button::after {
+    display: none;
+}
+
+.accordion-button-custom-end.accordion-button-custom.accordion-button::after {
+    display: none;
+}
+
+.accordion-button-custom-end.accordion-button-custom.accordion-button::before {
+    display: none;
+}
+
+.accordion-button-custom-empty.accordion-button::after {
+    display: none;
+}
+
+.accordion-button-custom-empty.accordion-button::before {
+    display: none;
+}
+
+.accordion-button-custom-action {
+    display: none !important;
+}
+
+.accordion-button-custom-empty.accordion-button:not(.collapsed),
+.accordion-button-custom.accordion-button:not(.collapsed) {
+    background-color: unset !important;
+}
+
+.accordion-button-custom-empty.accordion-button.collapsed:hover,
+.accordion-button-custom.accordion-button.collapsed:hover {
+    background-color: #f8f9f9 !important;
+}
+
+.accordion-header-custom-goods:hover,
+.accordion-header-custom:hover,
+.accordion-button-custom-empty:hover {
+    background-color: #f8f9f9 !important;
+
+    .accordion-button-custom-action {
+        display: flex !important;
+    }
+}
+
+.accordion-button.custom-hover-type-goods {
+    background-color: #f8f9f9 !important;
+}
+
+.accordion-header-custom-goods:hover {
+    background-color: #f8f9f9 !important;
+
+    &:hover > .accordion-button-custom-action {
+        background-color: #f8f9f9 !important;
+    }
+}
+
+#list-type-goods .accordion-border .accordion-item {
+    border-radius: 0;
+}
+
+#list-type-goods .accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+// --------------- Type-goods end

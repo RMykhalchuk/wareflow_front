@@ -1,0 +1,82 @@
+// --------------- Btn rewrite style start
+
+.btn-flat-danger:active,
+.btn-flat-danger.active,
+.btn-flat-danger:focus {
+    color: #ea5455 !important;
+    border-color: white !important;
+}
+
+.btn-flat-danger:disabled,
+.btn-flat-danger.disabled,
+fieldset:disabled .btn {
+    color: rgba(234, 84, 85, 1);
+    background-color: rgba(234, 84, 85, 0.16) !important;
+    border-color: white;
+}
+
+.btn-flat-primary:active,
+.btn-flat-primary.active,
+.btn-flat-primary:focus {
+    color: #d9b414 !important;
+    border-color: white !important;
+}
+
+.btn-flat-primary:disabled,
+.btn-flat-primary.disabled,
+fieldset:disabled .btn {
+    color: #d9b514de !important;
+    background-color: rgba(234, 84, 85, 0.16) !important;
+    border-color: white;
+}
+
+// --------------- Btn rewrite style end
+
+.form-check-info .form-check-input-custom {
+    border-color: #00cfe8 !important;
+    background-color: #00cfe8 !important;
+}
+.form-check-violet .form-check-input-custom {
+    border-color: #a867ef !important;
+    background-color: #a867ef !important;
+}
+
+.form-check-lime .form-check-input-custom {
+    border-color: #28c76f !important;
+    background-color: #28c76f !important;
+}
+
+.form-check-orange .form-check-input-custom {
+    border-color: #efa867 !important;
+    background-color: #efa867 !important;
+}
+
+.form-check-mint .form-check-input-custom {
+    border-color: #7ff0c9 !important;
+    background-color: #7ff0c9 !important;
+}
+.form-check-pink .form-check-input-custom {
+    border-color: #f07fde !important;
+    background-color: #f07fde !important;
+}
+
+.form-check-indigo .form-check-input-custom {
+    border-color: #4465dd !important;
+    background-color: #4465dd !important;
+}
+.form-check-coral .form-check-input-custom {
+    border-color: #f07f7f !important;
+    background-color: #f07f7f !important;
+}
+
+.form-check-info .form-check-input-custom:checked,
+.form-check-violet .form-check-input-custom:checked,
+.form-check-lime .form-check-input-custom:checked,
+.form-check-orange .form-check-input-custom:checked,
+.form-check-mint .form-check-input-custom:checked,
+.form-check-pink .form-check-input-custom:checked,
+.form-check-indigo .form-check-input-custom:checked,
+.form-check-coral .form-check-input-custom:checked {
+    outline: 2px solid #dbdade !important;
+    box-shadow: 0 4px 16px rgba(165, 163, 174, 0.45);
+}

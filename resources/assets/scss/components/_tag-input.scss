@@ -1,0 +1,40 @@
+.tag-input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border: 1px solid #d8d6de;
+    border-radius: 0.357rem;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0.571rem 1rem;
+}
+
+.tag {
+    color: #3b3b3b;
+    padding: 2px 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #3b3b3b29;
+}
+
+.tag span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tag-input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    font-size: 14px;
+    outline: none;
+
+    &:focus {
+        box-shadow: unset !important;
+    }
+}

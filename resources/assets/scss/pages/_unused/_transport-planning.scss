@@ -1,0 +1,115 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+// --------------- Type-Plannings start
+
+//dropdown-menu active start
+.js-button-dropdown-menu-active {
+    background-color: #a8aaae29;
+    display: flex !important;
+}
+
+.js-button-dropdown-menu:hover {
+    background-color: #a8aaae29;
+}
+
+// --------------- Type-Plannings end
+
+// =====
+// transport plannning ( create pt)
+
+.trans-planning-textarea textarea::-webkit-resizer {
+    display: none;
+}
+
+.p-trans-custom {
+    padding: 7px 10px;
+    margin-right: 10px;
+}
+
+.w-150px {
+    display: inline-flex;
+    width: 145px;
+}
+
+// Transport planning
+.transport-planning-accordion-container:hover {
+    background-color: #00000000 !important;
+}
+
+.transport-planning-yellow-text {
+    color: #d9b414;
+    font-weight: 500;
+}
+
+.transport-planning-bold-text {
+    font-weight: 500;
+}
+
+.transport-planning-time-box {
+    padding: 7px 10px;
+    background-color: #ffffff;
+    border: 1px solid #dbdade;
+}
+
+.transport-planning-tn-item:hover {
+    background-color: rgba(168, 170, 174, 0.08);
+}
+
+.grip-vertical-invoices,
+.delete-invoices {
+    display: none;
+    transition: 1s all linear;
+}
+
+.goods-invoices-item-title {
+    height: 20px;
+}
+
+.goods-invoices-item {
+    &:hover {
+        cursor: grab;
+
+        .goods-invoices-item-bg {
+            transition: 1s all linear;
+            background-color: rgb(241, 239, 239);
+            border-radius: 6px;
+            box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
+        }
+
+        .grip-vertical-invoices,
+        .delete-invoices {
+            display: block;
+        }
+    }
+}
+
+.goods-invoices-item-order {
+    width: 50px;
+}
+
+.goods-invoices-item-content {
+    row-gap: 1em;
+}
+
+//.ui-state-highlight-goods-invoices {
+//    height: 185px;
+//    background-color: rgba(236, 198, 35, 0.1);
+//    margin-top: 1em;
+//}
+
+.goods-invoices-item-bg {
+    background-color: rgb(248 248 249);
+    border-radius: 6px;
+}
+
+// Transport planning tables
+.tp-tables #tabs .jqx-tabs-content-element {
+    height: max-content;
+    overflow: unset;
+}
+
+.transport-planning-table-tabs > div.jqx-tabs-content.jqx-widget-content.jqx-rc-b {
+    height: fit-content !important;
+}
