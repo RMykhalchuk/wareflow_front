@@ -10,12 +10,12 @@ import {
 } from '@tanstack/react-table';
 import { Menu, Transition } from '@headlessui/react';
 import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
+import { useIntl } from 'react-intl';
+import { messages } from './messages';
 import type { Container } from '../types/container';
-import type { Translations } from './localization';
 
 interface ContainerTableProps {
   data: Container[];
-  translations: Translations;
   apiBaseUrl: string;
   locale: string;
   onPageChange: (page: number) => void;
@@ -28,7 +28,6 @@ interface ContainerTableProps {
 
 const ContainerTable: React.FC<ContainerTableProps> = ({
   data,
-  translations: t,
   apiBaseUrl,
   locale,
   onPageChange,
@@ -38,6 +37,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
   perPage,
   onPerPageChange,
 }) => {
+  const { formatMessage } = useIntl();
   const [sorting, setSorting] = useState<SortingState>([]);
   const languagePrefix = locale === 'en' ? '' : `/${locale}`;
 
@@ -46,7 +46,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
   const columns = useMemo(
     () => [
       columnHelper.accessor('local_id', {
-        header: t.id,
+        header: formatMessage(messages.id),
         cell: (info) => (
           <span className="text-gray-600 font-mono text-sm">
             {info.getValue()}
@@ -55,7 +55,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
         size: 80,
       }),
       columnHelper.accessor('name', {
-        header: t.name,
+        header: formatMessage(messages.name),
         cell: (info) => {
           const row = info.row.original;
           return (
@@ -72,15 +72,15 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
         },
       }),
       columnHelper.accessor('type', {
-        header: t.type,
+        header: formatMessage(messages.type),
         cell: (info) => {
           const typeMap: Record<string, string> = {
-            'Тип 1': t.type_1,
-            'Тип 2': t.type_2,
-            'Тип 3': t.type_3,
-            'Тип 4': t.type_4,
-            'Тип 5': t.type_5,
-            'Тип 6': t.type_6,
+            'Тип 1': formatMessage(messages.type_1),
+            'Тип 2': formatMessage(messages.type_2),
+            'Тип 3': formatMessage(messages.type_3),
+            'Тип 4': formatMessage(messages.type_4),
+            'Тип 5': formatMessage(messages.type_5),
+            'Тип 6': formatMessage(messages.type_6),
           };
           const value = info.getValue();
           return (
@@ -92,13 +92,13 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
         size: 200,
       }),
       columnHelper.accessor('reversible', {
-        header: t.reversible,
+        header: formatMessage(messages.reversible),
         cell: (info) => {
           const isReversible = info.getValue() === 1;
           return isReversible ? (
             <div className="flex items-center gap-2">
               <div className="w-2.5 h-2.5 bg-success-500 rounded-full" />
-              <span className="font-semibold text-gray-900">{t.yes}</span>
+              <span className="font-semibold text-gray-900">{formatMessage(messages.yes)}</span>
             </div>
           ) : null;
         },
@@ -106,7 +106,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
       }),
       columnHelper.display({
         id: 'actions',
-        header: () => <span className="text-center block">{t.actions}</span>,
+        header: () => <span className="text-center block">{formatMessage(messages.actions)}</span>,
         cell: ({ row }) => {
           const container = row.original;
           return (
@@ -135,7 +135,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
                               active ? 'bg-gray-100' : ''
                             } block px-4 py-2 text-sm text-gray-700`}
                           >
-                            {t.view}
+                            {formatMessage(messages.view)}
                           </a>
                         )}
                       </Menu.Item>
@@ -147,7 +147,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
                               active ? 'bg-gray-100' : ''
                             } block px-4 py-2 text-sm text-gray-700`}
                           >
-                            {t.edit}
+                            {formatMessage(messages.edit)}
                           </a>
                         )}
                       </Menu.Item>
@@ -161,7 +161,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
         size: 70,
       }),
     ],
-    [t, apiBaseUrl, languagePrefix, columnHelper]
+    [formatMessage, apiBaseUrl, languagePrefix, columnHelper]
   );
 
   const table = useReactTable({
@@ -218,7 +218,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
                   colSpan={columns.length}
                   className="px-6 py-12 text-center text-gray-500"
                 >
-                  {t.noResults}
+                  {formatMessage(messages.noResults)}
                 </td>
               </tr>
             ) : (
@@ -246,17 +246,17 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-center gap-4">
             <span className="text-sm text-gray-700">
-              {t.showing} <span className="font-medium">{startRecord}</span> - <span className="font-medium">{endRecord}</span> {t.of} <span className="font-medium">{totalRecords}</span> {t.results}
+              {formatMessage(messages.showing)} <span className="font-medium">{startRecord}</span> - <span className="font-medium">{endRecord}</span> {formatMessage(messages.of)} <span className="font-medium">{totalRecords}</span> {formatMessage(messages.results)}
             </span>
             <select
               value={perPage}
               onChange={(e) => onPerPageChange(Number(e.target.value))}
               className="rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-sm"
             >
-              <option value={10}>10 {t.rowsPerPage}</option>
-              <option value={25}>25 {t.rowsPerPage}</option>
-              <option value={50}>50 {t.rowsPerPage}</option>
-              <option value={100}>100 {t.rowsPerPage}</option>
+              <option value={10}>10 {formatMessage(messages.rowsPerPage)}</option>
+              <option value={25}>25 {formatMessage(messages.rowsPerPage)}</option>
+              <option value={50}>50 {formatMessage(messages.rowsPerPage)}</option>
+              <option value={100}>100 {formatMessage(messages.rowsPerPage)}</option>
             </select>
           </div>
 
@@ -266,7 +266,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
               disabled={currentPage === 1}
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {t.previous}
+              {formatMessage(messages.previous)}
             </button>
 
             {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
@@ -301,7 +301,7 @@ const ContainerTable: React.FC<ContainerTableProps> = ({
               disabled={currentPage === totalPages}
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {t.next}
+              {formatMessage(messages.next)}
             </button>
           </nav>
         </div>

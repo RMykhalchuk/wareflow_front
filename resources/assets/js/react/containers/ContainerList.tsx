@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useIntl } from 'react-intl';
 import ContainerTable from './ContainerTable';
 import ContainerFilters from './ContainerFilters';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorAlert from '../components/ErrorAlert';
 import { ContainerApi } from './api/containerApi';
-import { getTranslations } from './localization';
+import { messages } from './messages';
 import type { Container, ContainerFilters as Filters, ContainerAppProps } from '../types/container';
 
 const ContainerList: React.FC<ContainerAppProps> = ({ locale, apiBaseUrl }) => {
+  const { formatMessage } = useIntl();
   const [containers, setContainers] = useState<Container[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -21,8 +23,8 @@ const ContainerList: React.FC<ContainerAppProps> = ({ locale, apiBaseUrl }) => {
     reversible: '',
   });
 
-  const t = getTranslations(locale);
   const api = new ContainerApi(apiBaseUrl, locale);
+  const errorMessage = formatMessage(messages.error);
 
   const fetchContainers = useCallback(async () => {
     try {
@@ -33,12 +35,12 @@ const ContainerList: React.FC<ContainerAppProps> = ({ locale, apiBaseUrl }) => {
       setTotalRecords(response.total);
       setTotalPages(Math.ceil(response.total / perPage));
     } catch (err) {
-      setError(err instanceof Error ? err.message : t.error);
+      setError(err instanceof Error ? err.message : errorMessage);
       setContainers([]);
     } finally {
       setLoading(false);
     }
-  }, [currentPage, perPage, filters, api, t.error]);
+  }, [currentPage, perPage, filters, api, errorMessage]);
 
   useEffect(() => {
     fetchContainers();
@@ -60,17 +62,16 @@ const ContainerList: React.FC<ContainerAppProps> = ({ locale, apiBaseUrl }) => {
   };
 
   if (loading && containers.length === 0) {
-    return <LoadingSpinner message={t.loading} />;
+    return <LoadingSpinner message={formatMessage(messages.loading)} />;
   }
 
   return (
     <div className="space-y-6">
-      {error && <ErrorAlert error={error} title={t.error} />}
+      {error && <ErrorAlert error={error} title={formatMessage(messages.error)} />}
 
       <ContainerFilters
         filters={filters}
         onFiltersChange={handleFiltersChange}
-        translations={t}
       />
 
       {loading && containers.length > 0 ? (
@@ -80,7 +81,6 @@ const ContainerList: React.FC<ContainerAppProps> = ({ locale, apiBaseUrl }) => {
           </div>
           <ContainerTable
             data={containers}
-            translations={t}
             apiBaseUrl={apiBaseUrl}
             locale={locale}
             onPageChange={handlePageChange}
@@ -94,7 +94,6 @@ const ContainerList: React.FC<ContainerAppProps> = ({ locale, apiBaseUrl }) => {
       ) : (
         <ContainerTable
           data={containers}
-          translations={t}
           apiBaseUrl={apiBaseUrl}
           locale={locale}
           onPageChange={handlePageChange}

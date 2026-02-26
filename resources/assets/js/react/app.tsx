@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { IntlProvider } from 'react-intl';
 import ContainerList from './containers/ContainerList';
+import { localeMessages } from './containers/messages';
 import type { ContainerAppProps } from './types/container';
 
 class ContainerApp {
@@ -18,8 +20,15 @@ class ContainerApp {
       return;
     }
 
+    const locale = props.locale || 'uk';
+    const messages = localeMessages[locale] || localeMessages.uk;
+
     const root = ReactDOM.createRoot(element);
-    root.render(<ContainerList {...props} />);
+    root.render(
+      <IntlProvider locale={locale} messages={messages} defaultLocale="uk">
+        <ContainerList {...props} />
+      </IntlProvider>
+    );
     this.containers.set(elementId, root);
   }
 
