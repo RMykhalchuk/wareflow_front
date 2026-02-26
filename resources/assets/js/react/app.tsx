@@ -2,49 +2,61 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { IntlProvider } from 'react-intl';
 import ContainerList from './containers/ContainerList';
+import ContainerCreateForm from './containers/create/ContainerCreateForm';
 import { localeMessages } from './containers/messages';
-import type { ContainerAppProps } from './types/container';
+import type { ContainerAppProps, ContainerCreateAppProps } from './types/container';
+
+type SupportedLocale = 'uk' | 'en';
+
+function createRoot(
+  elementId: string,
+  locale: SupportedLocale,
+  children: React.ReactElement,
+  registry: Map<string, ReactDOM.Root>
+): void {
+  const element = document.getElementById(elementId);
+  if (!element) {
+    console.error(`Element with id "${elementId}" not found`);
+    return;
+  }
+  if (registry.has(elementId)) {
+    console.warn(`React root "${elementId}" is already mounted`);
+    return;
+  }
+  const msgs = localeMessages[locale] || localeMessages.uk;
+  const root = ReactDOM.createRoot(element);
+  root.render(
+    <IntlProvider locale={locale} messages={msgs} defaultLocale="uk">
+      {children}
+    </IntlProvider>
+  );
+  registry.set(elementId, root);
+}
 
 class ContainerApp {
-  private containers: Map<string, ReactDOM.Root> = new Map();
+  private roots: Map<string, ReactDOM.Root> = new Map();
 
   mount(elementId: string, props: ContainerAppProps): void {
-    const element = document.getElementById(elementId);
-    if (!element) {
-      console.error(`Element with id "${elementId}" not found`);
-      return;
-    }
+    const locale: SupportedLocale = props.locale || 'uk';
+    createRoot(elementId, locale, <ContainerList {...props} />, this.roots);
+  }
 
-    if (this.containers.has(elementId)) {
-      console.warn(`Container "${elementId}" is already mounted`);
-      return;
-    }
-
-    const locale = props.locale || 'uk';
-    const messages = localeMessages[locale] || localeMessages.uk;
-
-    const root = ReactDOM.createRoot(element);
-    root.render(
-      <IntlProvider locale={locale} messages={messages} defaultLocale="uk">
-        <ContainerList {...props} />
-      </IntlProvider>
-    );
-    this.containers.set(elementId, root);
+  mountCreate(elementId: string, props: ContainerCreateAppProps): void {
+    const locale: SupportedLocale = props.locale || 'uk';
+    createRoot(elementId, locale, <ContainerCreateForm {...props} />, this.roots);
   }
 
   unmount(elementId: string): void {
-    const root = this.containers.get(elementId);
+    const root = this.roots.get(elementId);
     if (root) {
       root.unmount();
-      this.containers.delete(elementId);
+      this.roots.delete(elementId);
     }
   }
 
   unmountAll(): void {
-    this.containers.forEach((root) => {
-      root.unmount();
-    });
-    this.containers.clear();
+    this.roots.forEach((root) => root.unmount());
+    this.roots.clear();
   }
 }
 

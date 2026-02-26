@@ -30,3 +30,22 @@ export interface ContainerAppProps {
 }
 
 export type ContainerType = 'Тип 1' | 'Тип 2' | 'Тип 3' | 'Тип 4' | 'Тип 5' | 'Тип 6';
+
+export interface ContainerCreateAppProps {
+  locale: 'uk' | 'en';
+  apiBaseUrl: string;
+  redirectUrl?: string;
+  cancelUrl?: string;
+}
+
+export interface ContainerCreateFormData {
+  name: string;
+  type_id: string;
+  code_format: string;
+  reversible: boolean;
+  weight: string;
+  max_weight: string;
+  height: string;
+  width: string;
+  length: string;
+}
