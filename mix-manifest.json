@@ -72,7 +72,6 @@
     "/public/assets/js/modules/document/create/ttn.js": "/public/assets/js/modules/document/create/ttn.js",
     "/public/assets/js/modules/document/update/ttn.js": "/public/assets/js/modules/document/update/ttn.js",
     "/public/assets/js/react/containers/api/containerApi.js": "/public/assets/js/react/containers/api/containerApi.js",
-    "/public/assets/js/react/containers/localization.js": "/public/assets/js/react/containers/localization.js",
     "/public/js/core/scripts.js": "/public/js/core/scripts.js",
     "/public/js/react/containers-bundle.js": "/public/js/react/containers-bundle.js",
     "/public/css/tailwind.css": "/public/css/tailwind.css",
