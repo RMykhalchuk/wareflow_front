@@ -1,1 +1,0 @@
-$((function(){$("#searchTypeDoc").on("input",(function(){var o=$(this).val().toLowerCase();console.log(o),$("#typeList li").each((function(){var t=$(this).find("p a").text().toLowerCase();console.log(t),$(this).find("p a").length>0&&t.includes(o)?$(this).show():$(this).hide()}))}))}));
