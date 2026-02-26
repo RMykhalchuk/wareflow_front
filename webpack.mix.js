@@ -131,7 +131,12 @@ mix
     .js('resources/js/core/app-menu.js', 'public/js/core')
     .js('resources/js/core/app.js', 'public/js/core')
     .js('resources/assets/js/scripts.js', 'public/js/core')
-    .react('resources/assets/js/react/app.jsx', 'public/js/react/containers-bundle.js')
+    .ts('resources/assets/js/react/app.tsx', 'public/js/react/containers-bundle.js')
+    .react()
+    .postCss('resources/assets/css/tailwind.css', 'public/css', [
+        require('tailwindcss'),
+        require('autoprefixer'),
+    ])
     .sass('resources/scss/base/themes/dark-layout.scss', 'public/css/base/themes', {sassOptions})
     .sass('resources/scss/base/themes/bordered-layout.scss', 'public/css/base/themes', {sassOptions})
     .sass('resources/scss/base/themes/semi-dark-layout.scss', 'public/css/base/themes', {sassOptions})
@@ -140,6 +145,27 @@ mix
     .sass('resources/scss/base/custom-rtl.scss', 'public/css-rtl', {sassOptions})
     .sass('resources/assets/scss/style-rtl.scss', 'public/css-rtl', {sassOptions})
     .sass('resources/assets/scss/style.scss', 'public/css', {sassOptions})
+    .webpackConfig({
+        resolve: {
+            extensions: ['.ts', '.tsx', '.js', '.jsx'],
+            alias: {
+                '@': path.resolve(__dirname, 'resources/assets/js'),
+                '@components': path.resolve(__dirname, 'resources/assets/js/react/components'),
+                '@containers': path.resolve(__dirname, 'resources/assets/js/react/containers'),
+                '@types': path.resolve(__dirname, 'resources/assets/js/react/types'),
+                '@api': path.resolve(__dirname, 'resources/assets/js/react/api'),
+            },
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.tsx?$/,
+                    loader: 'ts-loader',
+                    exclude: /node_modules/,
+                },
+            ],
+        },
+    })
 
     // .js('resources/js/core/app-menu.js', 'public/js/core/app-menu.min.js')
     // .js('resources/js/core/app.js', 'public/js/core/app.min.js')

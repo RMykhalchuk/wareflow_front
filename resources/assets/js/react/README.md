@@ -1,65 +1,206 @@
-# React Container Module
+# React + TypeScript + Tailwind Container Module
 
-Повноцінна React реалізація модуля контейнерів для поступової міграції з jQuery на React.
+Сучасна React реалізація модуля контейнерів з TypeScript, Tailwind CSS та TanStack Table.
 
-## Структура проекту
+## 🚀 Технології
+
+- **React 18** - сучасний UI фреймворк
+- **TypeScript** - типізація для надійності коду
+- **Tailwind CSS** - утилітарний CSS фреймворк
+- **TanStack Table v8** - потужна бібліотека для таблиць
+- **Headless UI** - доступні UI компоненти без стилів
+- **Laravel Mix** - збірка через Webpack
+
+## 📁 Структура проекту
 
 ```
 resources/assets/js/react/
-├── app.jsx                          # Головна точка входу
+├── app.tsx                          # Точка входу (TypeScript)
+├── types/
+│   └── container.ts                 # TypeScript інтерфейси
 ├── containers/                      # Модуль контейнерів
-│   ├── ContainerList.jsx           # Головний компонент списку
-│   ├── ContainerTable.jsx          # Таблиця контейнерів
-│   ├── ContainerRow.jsx            # Рядок таблиці
-│   ├── ContainerFilters.jsx        # Фільтри та пошук
-│   ├── ContainerPagination.jsx     # Пагінація
-│   ├── localization.js             # Переклади
+│   ├── ContainerList.tsx           # Головний компонент
+│   ├── ContainerTable.tsx          # Таблиця з TanStack Table
+│   ├── ContainerFilters.tsx        # Фільтри та пошук
+│   ├── localization.ts             # Типізовані переклади
 │   └── api/
-│       └── containerApi.js         # API методи
+│       └── containerApi.ts         # API клієнт (TypeScript)
 └── components/                      # Спільні компоненти
-    ├── LoadingSpinner.jsx          # Індикатор завантаження
-    └── ErrorAlert.jsx              # Повідомлення про помилки
+    ├── LoadingSpinner.tsx          # Індикатор завантаження
+    ├── ErrorAlert.tsx              # Повідомлення про помилки
+    └── Select.tsx                  # Headless UI селект
 ```
 
-## Особливості
+## 🎯 Особливості
 
-✅ **Модульна архітектура** - кожен компонент у окремому файлі
-✅ **Повторне використання** - спільні компоненти для всього додатку
-✅ **API Layer** - окремий шар для взаємодії з бекендом
-✅ **Локалізація** - підтримка української та англійської мов
-✅ **Поступова міграція** - React та jQuery працюють паралельно
-✅ **Webpack** - збірка через Laravel Mix
+✅ **Без jQuery** - повністю на React
+✅ **TypeScript** - повна типізація коду
+✅ **Tailwind CSS** - сучасний дизайн без Bootstrap
+✅ **TanStack Table** - сортування, пагінація, фільтри
+✅ **Headless UI** - доступні селекти та меню
+✅ **Модульність** - чистий та підтримуваний код
+✅ **Type Safety** - помилки виявляються на етапі компіляції
 
-## Встановлення
+## 📦 Встановлення
 
 ### 1. Встановити залежності
 
 ```bash
-npm install react react-dom @babel/preset-react --save
+npm install
 ```
 
-### 2. Зібрати React компоненти
+Це встановить:
+- React 18 та React DOM
+- TypeScript
+- TanStack Table
+- Headless UI
+- Tailwind CSS
+- ts-loader для TypeScript
+
+### 2. Зібрати проект
 
 ```bash
+# Development
 npm run dev
-# або для production
+
+# Watch mode (авто-перезбірка)
+npm run watch
+
+# Production (мінімізація)
 npm run production
+
+# Перевірка типів
+npm run type-check
 ```
 
-### 3. Налаштування Laravel Mix
+## 🎨 Tailwind CSS
 
-Конфігурація вже додана в `webpack.mix.js`:
+### Конфігурація
 
-```javascript
-mix.react('resources/assets/js/react/app.jsx', 'public/js/react/containers-bundle.js')
+Файл `tailwind.config.js` налаштований з:
+- Кастомними кольорами (primary, success, danger)
+- Підтримкою форм (`@tailwindcss/forms`)
+- Без preflight для сумісності з існуючими стилями
+
+### Використання
+
+```tsx
+// Приклад використання Tailwind класів
+<div className="flex items-center gap-4">
+  <button className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
+    Кнопка
+  </button>
+</div>
 ```
 
-## Використання в Blade
+## 📊 TanStack Table
 
-### Базове використання
+### Можливості
+
+- **Сортування** - клік по заголовку колонки
+- **Пагінація** - серверна пагінація
+- **Гнучкість** - повний контроль над рендерингом
+- **Performance** - віртуалізація для великих даних
+
+### Приклад використання
+
+```tsx
+import { useReactTable, getCoreRowModel } from '@tanstack/react-table';
+
+const table = useReactTable({
+  data,
+  columns,
+  getCoreRowModel: getCoreRowModel(),
+  manualPagination: true,
+});
+```
+
+## 🎭 Headless UI
+
+### Компоненти
+
+**Select** - доступний селект з клавіатурною навігацією:
+```tsx
+<Select
+  value={value}
+  onChange={setValue}
+  options={[
+    { value: '1', label: 'Опція 1' },
+    { value: '2', label: 'Опція 2' },
+  ]}
+/>
+```
+
+**Menu** - контекстне меню для дій:
+```tsx
+<Menu>
+  <Menu.Button>Дії</Menu.Button>
+  <Menu.Items>
+    <Menu.Item>Переглянути</Menu.Item>
+    <Menu.Item>Редагувати</Menu.Item>
+  </Menu.Items>
+</Menu>
+```
+
+## 🔧 TypeScript
+
+### Типи
+
+```typescript
+// Інтерфейс контейнера
+interface Container {
+  id: number;
+  local_id: string;
+  name: string;
+  code_format: string;
+  type: string;
+  reversible: 0 | 1;
+}
+
+// Props компонента
+interface ContainerAppProps {
+  locale: 'uk' | 'en';
+  apiBaseUrl: string;
+}
+```
+
+### Перевірка типів
+
+```bash
+npm run type-check
+```
+
+## 🌐 API Integration
+
+### Клієнт API
+
+```typescript
+const api = new ContainerApi(baseUrl, locale);
+
+// Отримати список
+const response = await api.fetchContainers(page, perPage, filters);
+
+// Отримати один
+const container = await api.getContainer(id);
+
+// Створити
+const newContainer = await api.createContainer(data);
+
+// Оновити
+const updated = await api.updateContainer(id, data);
+
+// Видалити
+await api.deleteContainer(id);
+```
+
+## 📝 Використання в Blade
 
 ```blade
 @extends('layouts.admin')
+
+@section('before-style')
+    <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
+@endsection
 
 @section('content')
     <div id="container-app"></div>
@@ -78,230 +219,149 @@ mix.react('resources/assets/js/react/app.jsx', 'public/js/react/containers-bundl
 @endsection
 ```
 
-### Розмонтування компонента
+## 🎨 Кастомізація дизайну
+
+### Tailwind теми
+
+Відредагуйте `tailwind.config.js`:
 
 ```javascript
-// Розмонтувати конкретний компонент
-window.ContainerApp.unmount('container-app');
-
-// Розмонтувати всі компоненти
-window.ContainerApp.unmountAll();
-```
-
-## API Endpoints
-
-Необхідно створити наступні ендпоінти в Laravel:
-
-### GET /containers/api/list
-
-Отримання списку контейнерів з фільтрацією та пагінацією
-
-**Параметри запиту:**
-- `page` (int) - номер сторінки
-- `per_page` (int) - кількість на сторінці
-- `search` (string) - пошуковий запит
-- `type` (string) - фільтр за типом
-- `reversible` (0|1) - фільтр за реверсивністю
-
-**Відповідь:**
-```json
-{
-    "data": [
-        {
-            "id": 1,
-            "local_id": "001",
-            "name": "Контейнер 1",
-            "code_format": "CONT-001",
-            "type": "Тип 1",
-            "reversible": 1
-        }
-    ],
-    "total": 100
+theme: {
+  extend: {
+    colors: {
+      primary: {
+        500: '#your-color',
+        600: '#your-darker-color',
+      },
+    },
+  },
 }
 ```
 
-### Приклад контролера
+### Компоненти
 
-```php
-<?php
+Кожен компонент має props для кастомізації:
 
-namespace App\Http\Controllers\Api;
-
-use App\Http\Controllers\Controller;
-use App\Models\Container;
-use Illuminate\Http\Request;
-
-class ContainerApiController extends Controller
-{
-    public function list(Request $request)
-    {
-        $query = Container::query();
-
-        // Пошук
-        if ($request->filled('search')) {
-            $search = $request->search;
-            $query->where(function($q) use ($search) {
-                $q->where('name', 'like', "%{$search}%")
-                  ->orWhere('code_format', 'like', "%{$search}%");
-            });
-        }
-
-        // Фільтр за типом
-        if ($request->filled('type')) {
-            $query->where('type', $request->type);
-        }
-
-        // Фільтр за реверсивністю
-        if ($request->filled('reversible')) {
-            $query->where('reversible', $request->reversible);
-        }
-
-        $perPage = $request->input('per_page', 10);
-        $containers = $query->paginate($perPage);
-
-        return response()->json([
-            'data' => $containers->items(),
-            'total' => $containers->total()
-        ]);
-    }
-
-    public function show($id)
-    {
-        $container = Container::findOrFail($id);
-        return response()->json($container);
-    }
-
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'code_format' => 'required|string|max:255',
-            'type' => 'required|string',
-            'reversible' => 'boolean',
-        ]);
-
-        $container = Container::create($validated);
-        return response()->json($container, 201);
-    }
-
-    public function update(Request $request, $id)
-    {
-        $container = Container::findOrFail($id);
-
-        $validated = $request->validate([
-            'name' => 'string|max:255',
-            'code_format' => 'string|max:255',
-            'type' => 'string',
-            'reversible' => 'boolean',
-        ]);
-
-        $container->update($validated);
-        return response()->json($container);
-    }
-
-    public function destroy($id)
-    {
-        $container = Container::findOrFail($id);
-        $container->delete();
-        return response()->json(null, 204);
-    }
-}
+```tsx
+<LoadingSpinner size="lg" message="Завантаження..." />
+<ErrorAlert error="Помилка" title="Упс!" />
 ```
 
-### Routes
+## 🧪 Тестування
 
-```php
-Route::prefix('containers/api')->group(function () {
-    Route::get('/list', [ContainerApiController::class, 'list']);
-    Route::get('/{id}', [ContainerApiController::class, 'show']);
-    Route::post('/', [ContainerApiController::class, 'store']);
-    Route::put('/{id}', [ContainerApiController::class, 'update']);
-    Route::delete('/{id}', [ContainerApiController::class, 'destroy']);
-});
+### Майбутні плани
+
+```bash
+# Unit тести
+npm run test
+
+# E2E тести
+npm run test:e2e
+
+# Coverage
+npm run test:coverage
 ```
 
-## Додавання нових компонентів
+## 📚 Локалізація
 
-### 1. Створити компонент
+Всі тексти винесені в `localization.ts`:
 
-```jsx
-// resources/assets/js/react/containers/NewComponent.jsx
-import React from 'react';
-
-const NewComponent = ({ prop1, prop2 }) => {
-    return (
-        <div>
-            {/* JSX код */}
-        </div>
-    );
+```typescript
+export const translations: Record<'uk' | 'en', Translations> = {
+  uk: {
+    title: 'Контейнери',
+    search: 'Пошук...',
+    // ...
+  },
+  en: {
+    title: 'Containers',
+    search: 'Search...',
+    // ...
+  },
 };
-
-export default NewComponent;
 ```
 
-### 2. Імпортувати в батьківський компонент
+## 🚀 Переваги нового стеку
 
-```jsx
-import NewComponent from './NewComponent';
-```
+### Без jQuery
+- ❌ Стара бібліотека з обмеженими можливостями
+- ✅ Сучасний React з хуками та функціональними компонентами
 
-### 3. Перезібрати
+### TypeScript
+- ❌ JavaScript без типів - помилки в runtime
+- ✅ TypeScript - помилки виявляються при розробці
+
+### Tailwind CSS
+- ❌ Bootstrap - важкий та застарілий
+- ✅ Tailwind - легкий, гнучкий, сучасний
+
+### TanStack Table
+- ❌ jqxGrid - платний, важкий, застарілий
+- ✅ TanStack Table - безкоштовний, легкий, сучасний
+
+### Headless UI
+- ❌ jQuery UI - застарілі компоненти
+- ✅ Headless UI - доступні, сучасні, гнучкі
+
+## 📈 Міграція інших модулів
+
+План поступової міграції:
+
+- [x] **Контейнери** - повністю на React + TS + Tailwind
+- [ ] **SKU** - наступний модуль
+- [ ] **Документи**
+- [ ] **Інвентаризація**
+- [ ] **Локації**
+- [ ] **Транспорт**
+
+## 🔍 Відладка
+
+### Development tools
 
 ```bash
-npm run dev
-```
-
-## Поступова міграція
-
-Цей підхід дозволяє:
-
-1. **Залишити старий код** - jQuery компоненти продовжують працювати
-2. **Поступово мігрувати** - модуль за модулем
-3. **Використовувати React** - для нових фіч та рефакторингу старих
-4. **Спільні стилі** - Bootstrap CSS працює для обох
-
-### План міграції
-
-- [x] Контейнери - основний список
-- [ ] Контейнери - створення/редагування
-- [ ] SKU
-- [ ] Документи
-- [ ] Інвентаризація
-- [ ] Локації
-- [ ] Транспорт
-
-## Відладка
-
-### Development режим
-
-```bash
+# Watch mode з source maps
 npm run watch
 ```
 
-Source maps включені в dev режимі для зручного дебагу.
+### React DevTools
+Встановіть розширення React DevTools для Chrome/Firefox
 
-### Production режим
-
+### TypeScript errors
 ```bash
-npm run production
+npm run type-check
 ```
 
-Мінімізація та оптимізація для продакшну.
+## 📖 Корисні посилання
 
-## Переваги цього підходу
+- [React Docs](https://react.dev/)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [TanStack Table](https://tanstack.com/table/v8)
+- [Headless UI](https://headlessui.com/)
 
-1. **Модульність** - легко підтримувати та розширювати
-2. **Тестування** - кожен компонент можна тестувати окремо
-3. **Повторне використання** - компоненти можна використовувати в різних місцях
-4. **TypeScript ready** - легко додати типізацію в майбутньому
-5. **Сучасний стек** - React 18 з хуками
-6. **Поступова міграція** - не потрібно переписувати все відразу
+## 🤝 Внесок
 
-## Наступні кроки
+Для додавання нових функцій:
 
-1. Додати TypeScript для типобезпеки
-2. Додати React Router для SPA навігації
-3. Додати State Management (Redux/Zustand)
-4. Додати Unit тести (Jest + React Testing Library)
-5. Додати E2E тести (Cypress/Playwright)
-6. Мігрувати інші модулі на React
+1. Створити нову гілку
+2. Написати TypeScript код з типами
+3. Використовувати Tailwind для стилів
+4. Перевірити типи: `npm run type-check`
+5. Зібрати: `npm run production`
+6. Створити Pull Request
+
+## ⚡ Performance
+
+- **Code splitting** - готовий до впровадження
+- **Lazy loading** - компоненти завантажуються за потреби
+- **Мінімізація** - в production режимі
+- **Tree shaking** - непотрібний код видаляється
+
+## 🎓 Навчання
+
+Якщо ви нові в цих технологіях:
+
+1. Почніть з [React Tutorial](https://react.dev/learn)
+2. Вивчіть основи [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+3. Освойте [Tailwind CSS](https://tailwindcss.com/docs/utility-first)
+4. Ознайомтесь з [TanStack Table](https://tanstack.com/table/v8/docs/guide/introduction)
