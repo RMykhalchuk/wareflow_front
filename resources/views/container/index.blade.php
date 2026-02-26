@@ -20,9 +20,6 @@
                 });
             }
 
-            if (typeof feather !== 'undefined') {
-                feather.replace();
-            }
         });
     </script>
 @endsection
